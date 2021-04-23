@@ -1,0 +1,43 @@
+C:\Users\MINH THU\source\repos\Login\Login\bin\Debug\Login.exe.config
+C:\Users\MINH THU\source\repos\Login\Login\bin\Debug\Login.exe
+C:\Users\MINH THU\source\repos\Login\Login\bin\Debug\Login.pdb
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.csprojAssemblyReference.cache
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.exe
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.pdb
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.LoginForm.resources
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.AddStudent.resources
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.Main.resources
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.ListStudent.resources
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.UpdateDeleteStudentForm.resources
+C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.AddAdmin.resources
+D:\repos\Login\Login\obj\Debug\Login.csprojAssemblyReference.cache
+D:\repos\Login\Login\obj\Debug\Login.AddAdmin.resources
+D:\repos\Login\Login\obj\Debug\Login.AddStudent.resources
+D:\repos\Login\Login\obj\Debug\Login.ListStudent.resources
+D:\repos\Login\Login\obj\Debug\Login.LoginForm.resources
+D:\repos\Login\Login\obj\Debug\Login.Main.resources
+D:\repos\Login\Login\obj\Debug\Login.Properties.Resources.resources
+D:\repos\Login\Login\obj\Debug\Login.UpdateDeleteStudentForm.resources
+D:\repos\Login\Login\obj\Debug\Login.csproj.GenerateResource.cache
+D:\repos\Login\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+D:\repos\Login\Login\obj\Debug\Login.exe
+D:\repos\Login\Login\obj\Debug\Login.pdb
+D:\repos\Login\Login\bin\Debug\Login.exe.config
+D:\repos\Login\Login\bin\Debug\Login.exe
+D:\repos\Login\Login\bin\Debug\Login.pdb
+D:\repos\Login\Login\obj\Debug\Login.StaticsForm.resources
+D:\repos\Login\Login\obj\Debug\Login.PrintForm.resources
+D:\repos\Login\Login\obj\Debug\Login.ManageStudentsForm.resources
+D:\repos\Login\Login\obj\Debug\Login.AddCourseForm.resources
+D:\repos\Login\Login\obj\Debug\Login.EditCourseForm.resources
+D:\repos\Login\Login\obj\Debug\Login.RemoveCourseForm.resources
+D:\repos\Login\Login\obj\Debug\Login.AddScoreForm.resources
+D:\repos\Login\Login\obj\Debug\Login.ManageCourseForm.resources
+D:\repos\Login\Login\obj\Debug\Login.ManageScoreForm.resources
+D:\repos\Login\Login\obj\Debug\Login.PrintCourseForm.resources
+D:\repos\Login\Login\obj\Debug\Login.RemoveScoreForm.resources
+D:\repos\Login\Login\obj\Debug\Login.AvgScoreForm.resources
+D:\repos\Login\Login\obj\Debug\Login.AvgResultByScoreForm.resources
