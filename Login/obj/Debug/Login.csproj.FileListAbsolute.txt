@@ -41,3 +41,5 @@ D:\repos\Login\Login\obj\Debug\Login.PrintCourseForm.resources
 D:\repos\Login\Login\obj\Debug\Login.RemoveScoreForm.resources
 D:\repos\Login\Login\obj\Debug\Login.AvgScoreForm.resources
 D:\repos\Login\Login\obj\Debug\Login.AvgResultByScoreForm.resources
+D:\repos\Login\Login\obj\Debug\Login.ChartResultForm.resources
+D:\repos\Login\Login\obj\Debug\Login.StaticsResultForm.resources

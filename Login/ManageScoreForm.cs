@@ -33,8 +33,12 @@ namespace Login
             dataGridViewListStudent.RowTemplate.Height = 80;
             dataGridViewListStudent.DataSource = student.getStudentWithSomeAtribute();
             dataGridViewListStudent.AllowUserToAddRows = false;
+            dataGridViewListStudent.Columns[0].Width = 98;
+            dataGridViewListStudent.Columns[1].Width = 98;
+            dataGridViewListStudent.Columns[2].Width = 120;
+            dataGridViewListStudent.Columns[3].Width = 120;
 
-            
+
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
@@ -115,13 +119,17 @@ namespace Login
         {
             //datagridview
             dataGridViewListStudent.ReadOnly = true;
-            dataGridViewListStudent.RowTemplate.Height = 80;
+            dataGridViewListStudent.RowTemplate.Height = 95;
             dataGridViewListStudent.DataSource = student.getStudentWithSomeAtribute();
             dataGridViewListStudent.AllowUserToAddRows = false;
             dataGridViewListStudent.Columns[0].HeaderText = "ID";
             //dataGridViewListStudent.Columns[0].Width = 90;
             dataGridViewListStudent.Columns[1].HeaderText = "Firstname";
             dataGridViewListStudent.Columns[2].HeaderText = "Lastname";
+            dataGridViewListStudent.Columns[0].Width = 98;
+            dataGridViewListStudent.Columns[1].Width = 98;
+            dataGridViewListStudent.Columns[2].Width = 120;
+            dataGridViewListStudent.Columns[3].Width = 120;
         }
 
         private void buttonShowScore_Click(object sender, EventArgs e)
@@ -129,16 +137,20 @@ namespace Login
             //datagridview
             dataGridViewListStudent.ReadOnly = true;
             dataGridViewListStudent.RowTemplate.Height = 80;
-            dataGridViewListStudent.DataSource = score.getScore();
+            dataGridViewListStudent.DataSource = score.getStudentAndScore();
             dataGridViewListStudent.AllowUserToAddRows = false;
             dataGridViewListStudent.Columns[0].HeaderText = "ID Student";
-            //dataGridViewListStudent.Columns[0].Width = 90;
-            dataGridViewListStudent.Columns[1].HeaderText = "ID Course";
-            dataGridViewListStudent.Columns[2].HeaderText = "Score Student";
-            dataGridViewListStudent.Columns[3].HeaderText = "Descriptions";
-        }
+            dataGridViewListStudent.Columns[4].HeaderText = "Score Student";
+            dataGridViewListStudent.Columns[5].HeaderText = "ID Course";
+            dataGridViewListStudent.Columns[0].Width = 53;
+            dataGridViewListStudent.Columns[1].Width = 64;
+            dataGridViewListStudent.Columns[2].Width = 64;
+            dataGridViewListStudent.Columns[3].Width = 150;
+            dataGridViewListStudent.Columns[4].Width = 53;
+            dataGridViewListStudent.Columns[5].Width = 53;
+        }       
 
-        private void dataGridViewListStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewListStudent_DoubleClick(object sender, EventArgs e)
         {
             //get id
             textBoxIdStudent.Text = dataGridViewListStudent.CurrentRow.Cells[0].Value.ToString();

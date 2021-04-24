@@ -130,18 +130,18 @@ namespace Login
             this.dataGridViewListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListStudent.Location = new System.Drawing.Point(392, 60);
             this.dataGridViewListStudent.Name = "dataGridViewListStudent";
-            this.dataGridViewListStudent.RowHeadersWidth = 51;
+            this.dataGridViewListStudent.RowHeadersWidth = 70;
             this.dataGridViewListStudent.RowTemplate.Height = 24;
-            this.dataGridViewListStudent.Size = new System.Drawing.Size(680, 369);
+            this.dataGridViewListStudent.Size = new System.Drawing.Size(701, 369);
             this.dataGridViewListStudent.TabIndex = 35;
-            this.dataGridViewListStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListStudent_CellContentClick);
+            this.dataGridViewListStudent.DoubleClick += new System.EventHandler(this.dataGridViewListStudent_DoubleClick);
             // 
             // buttonShowScore
             // 
             this.buttonShowScore.BackColor = System.Drawing.Color.SlateGray;
             this.buttonShowScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonShowScore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonShowScore.Location = new System.Drawing.Point(798, 17);
+            this.buttonShowScore.Location = new System.Drawing.Point(818, 17);
             this.buttonShowScore.Name = "buttonShowScore";
             this.buttonShowScore.Size = new System.Drawing.Size(274, 37);
             this.buttonShowScore.TabIndex = 36;
@@ -201,7 +201,7 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(1100, 450);
+            this.ClientSize = new System.Drawing.Size(1123, 450);
             this.Controls.Add(this.comboBoxCourse);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonRemove);

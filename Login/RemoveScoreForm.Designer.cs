@@ -37,11 +37,11 @@ namespace Login
             // dataGridViewListScore
             // 
             this.dataGridViewListScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListScore.Location = new System.Drawing.Point(60, 41);
+            this.dataGridViewListScore.Location = new System.Drawing.Point(23, 41);
             this.dataGridViewListScore.Name = "dataGridViewListScore";
             this.dataGridViewListScore.RowHeadersWidth = 51;
             this.dataGridViewListScore.RowTemplate.Height = 24;
-            this.dataGridViewListScore.Size = new System.Drawing.Size(680, 369);
+            this.dataGridViewListScore.Size = new System.Drawing.Size(765, 369);
             this.dataGridViewListScore.TabIndex = 25;
             // 
             // buttonRemove
@@ -49,7 +49,7 @@ namespace Login
             this.buttonRemove.BackColor = System.Drawing.Color.Red;
             this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonRemove.Location = new System.Drawing.Point(60, 436);
+            this.buttonRemove.Location = new System.Drawing.Point(23, 436);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(183, 37);
             this.buttonRemove.TabIndex = 26;
@@ -61,6 +61,7 @@ namespace Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 485);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.dataGridViewListScore);

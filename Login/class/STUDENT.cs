@@ -70,7 +70,7 @@ namespace Login
         public DataTable getStudentWithSomeAtribute()
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("SELECT ID, Firstname, Lastname FROM Student", db.getConnection);
+            SqlCommand command = new SqlCommand("SELECT ID, Firstname, Lastname, Birthdate FROM Student", db.getConnection);
             DataTable dt = new DataTable();
             adapter.SelectCommand = command;
             adapter.Fill(dt);

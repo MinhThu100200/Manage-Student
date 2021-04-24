@@ -101,7 +101,7 @@ namespace Login
         public DataTable getStudentAndScore()
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("SELECT st.ID, st.Firstname, st.Lastname, co.Id, co.Label, sc.Score_student FROM Score as sc, Student as st, Course as co "+
+            SqlCommand command = new SqlCommand("SELECT st.ID, st.Firstname, st.Lastname, co.Label, sc.Score_student, co.Id FROM Score as sc, Student as st, Course as co " +
                 "WHERE sc.Student_id = st.ID and sc.Course_id = co.Id", db.getConnection);
             DataTable dt = new DataTable();
             adapter.SelectCommand = command;
