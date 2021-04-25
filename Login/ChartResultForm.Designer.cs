@@ -35,8 +35,8 @@ namespace Login
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.buttonChartByCourse = new System.Windows.Forms.Button();
             this.buttonChartByResult = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.chartScore = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chartScore)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonChartByCourse
@@ -63,24 +63,24 @@ namespace Login
             this.buttonChartByResult.Text = "Chart By Result";
             this.buttonChartByResult.UseVisualStyleBackColor = false;
             // 
-            // chart1
+            // chartScore
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartScore.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(30, 58);
-            this.chart1.Name = "chart1";
+            this.chartScore.Legends.Add(legend1);
+            this.chartScore.Location = new System.Drawing.Point(30, 58);
+            this.chartScore.Name = "chartScore";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(694, 388);
-            this.chart1.TabIndex = 2;
-            this.chart1.Text = "chartScore";
+            this.chartScore.Series.Add(series1);
+            this.chartScore.Size = new System.Drawing.Size(694, 388);
+            this.chartScore.TabIndex = 2;
+            this.chartScore.Text = "chartScore";
             title1.Name = "Chart Score";
             title1.Text = "Chart Score";
-            this.chart1.Titles.Add(title1);
+            this.chartScore.Titles.Add(title1);
             // 
             // ChartResultForm
             // 
@@ -88,12 +88,12 @@ namespace Login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(750, 458);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chartScore);
             this.Controls.Add(this.buttonChartByResult);
             this.Controls.Add(this.buttonChartByCourse);
             this.Name = "ChartResultForm";
             this.Text = "ChartResultForm";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartScore)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,6 +102,6 @@ namespace Login
 
         private System.Windows.Forms.Button buttonChartByCourse;
         private System.Windows.Forms.Button buttonChartByResult;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartScore;
     }
 }

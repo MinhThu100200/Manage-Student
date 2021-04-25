@@ -35,5 +35,15 @@ namespace Login
             adapter.Fill(dt);
             return dt;
         }
+        public DataTable searchStudentScore(int id, string fname)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("SELECT * FROM Student WHERE CONCAT(Firstname,' ',Lastname,' ',Address) LIKE '%" +  + "%'", db.getConnection);
+            DataTable dt = new DataTable();
+            adapter.SelectCommand = command;
+            adapter.Fill(dt);
+            return dt;
+        }
     }
+
 }

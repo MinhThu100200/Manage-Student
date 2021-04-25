@@ -126,6 +126,7 @@ namespace Login
             this.buttonSearch.TabIndex = 61;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // dataGridViewScoreOfCourse
             // 
@@ -136,6 +137,7 @@ namespace Login
             this.dataGridViewScoreOfCourse.RowTemplate.Height = 24;
             this.dataGridViewScoreOfCourse.Size = new System.Drawing.Size(1024, 195);
             this.dataGridViewScoreOfCourse.TabIndex = 62;
+            this.dataGridViewScoreOfCourse.DoubleClick += new System.EventHandler(this.dataGridViewScoreOfCourse_DoubleClick);
             // 
             // buttonCancel
             // 
@@ -148,6 +150,7 @@ namespace Login
             this.buttonCancel.TabIndex = 63;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonPrint
             // 
@@ -160,6 +163,7 @@ namespace Login
             this.buttonPrint.TabIndex = 64;
             this.buttonPrint.Text = "Print";
             this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // AvgResultByScoreForm
             // 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,6 +70,35 @@ namespace Login
             dataGridViewScoreOfCourse.AllowUserToAddRows = false;
 
         
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDlg = new PrintDialog();
+            PrintDocument printDoc = new PrintDocument();
+            printDoc.DocumentName = "Print Document";
+            printDlg.Document = printDoc;
+            printDlg.AllowSelection = true;
+            printDlg.AllowSomePages = true;
+
+            if (printDlg.ShowDialog() == DialogResult.OK) printDoc.Print();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewScoreOfCourse_DoubleClick(object sender, EventArgs e)
+        {
+            txtIdStudent.Text = dataGridViewScoreOfCourse.CurrentRow.Cells[0].Value.ToString();
+            txtFirstName.Text = dataGridViewScoreOfCourse.CurrentRow.Cells[1].Value.ToString();
+            txtLastName.Text = dataGridViewScoreOfCourse.CurrentRow.Cells[2].Value.ToString();
         }
     }
 }
