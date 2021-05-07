@@ -224,6 +224,9 @@
     <EmbeddedResource Include="Contacts\EditContactsForm.resx">
       <DependentUpon>EditContactsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\SelectContactsForm.resx">
+      <DependentUpon>SelectContactsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contacts\ShowFullListContactsForm.resx">
       <DependentUpon>ShowFullListContactsForm.cs</DependentUpon>
     </EmbeddedResource>
