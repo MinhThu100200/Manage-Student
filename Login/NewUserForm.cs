@@ -16,5 +16,11 @@ namespace Login
         {
             InitializeComponent();
         }
+
+        private void labelSignUp_Click(object sender, EventArgs e)
+        {
+            LoginForm frm = new LoginForm();
+            frm.ShowDialog();
+        }
     }
 }

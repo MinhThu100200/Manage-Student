@@ -124,5 +124,11 @@ namespace Login
         {
            
         }
+
+        private void labelNewUser_Click(object sender, EventArgs e)
+        {
+            NewUserForm frm = new NewUserForm();
+            frm.ShowDialog();
+        }
     }
 }
