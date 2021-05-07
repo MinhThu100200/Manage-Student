@@ -50,11 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contacts\AddContactsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\AddContactsForm.Designer.cs">
+      <DependentUpon>AddContactsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Course\AddCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Course\AddCourseForm.Designer.cs">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\EditContactsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\EditContactsForm.Designer.cs">
+      <DependentUpon>EditContactsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NewUserForm.cs">
       <SubType>Form</SubType>
@@ -87,10 +99,10 @@
       <DependentUpon>ChartResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="class\COURSE.cs" />
-    <Compile Include="ContactForm.cs">
+    <Compile Include="Contacts\ContactForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ContactForm.Designer.cs">
+    <Compile Include="Contacts\ContactForm.Designer.cs">
       <DependentUpon>ContactForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Course\EditCourseForm.cs">
@@ -99,7 +111,7 @@
     <Compile Include="Course\EditCourseForm.Designer.cs">
       <DependentUpon>EditCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global.cs" />
+    <Compile Include="class\Global.cs" />
     <Compile Include="Course\ManageCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +144,18 @@
       <DependentUpon>RemoveScoreForm.cs</DependentUpon>
     </Compile>
     <Compile Include="class\SCORE.cs" />
+    <Compile Include="Contacts\SelectContactsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\SelectContactsForm.Designer.cs">
+      <DependentUpon>SelectContactsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ShowFullListContactsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\ShowFullListContactsForm.Designer.cs">
+      <DependentUpon>ShowFullListContactsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaticsResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
