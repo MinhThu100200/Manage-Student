@@ -65,7 +65,8 @@
             this.rESULTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,7 +82,7 @@
             this.sTUDENTToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.sTUDENTToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sTUDENTToolStripMenuItem.Name = "sTUDENTToolStripMenuItem";
-            this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.sTUDENTToolStripMenuItem.Text = "STUDENT";
             // 
             // addNewStudentToolStripMenuItem
@@ -91,7 +92,7 @@
             this.addNewStudentToolStripMenuItem.Name = "addNewStudentToolStripMenuItem";
             this.addNewStudentToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.addNewStudentToolStripMenuItem.ShowShortcutKeys = false;
-            this.addNewStudentToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.addNewStudentToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.addNewStudentToolStripMenuItem.Text = "Add New Student Ctrl A";
             this.addNewStudentToolStripMenuItem.Click += new System.EventHandler(this.addNewStudentToolStripMenuItem_Click);
             // 
@@ -100,7 +101,7 @@
             this.studentListToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.studentListToolStripMenuItem.ForeColor = System.Drawing.Color.Salmon;
             this.studentListToolStripMenuItem.Name = "studentListToolStripMenuItem";
-            this.studentListToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.studentListToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.studentListToolStripMenuItem.Text = "Student List";
             this.studentListToolStripMenuItem.Click += new System.EventHandler(this.studentListToolStripMenuItem_Click);
             // 
@@ -109,7 +110,7 @@
             this.staticsToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
             this.staticsToolStripMenuItem.ForeColor = System.Drawing.Color.Salmon;
             this.staticsToolStripMenuItem.Name = "staticsToolStripMenuItem";
-            this.staticsToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.staticsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.staticsToolStripMenuItem.Text = "Statics";
             this.staticsToolStripMenuItem.Click += new System.EventHandler(this.staticsToolStripMenuItem_Click);
             // 
@@ -118,7 +119,7 @@
             this.editRemoveToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.editRemoveToolStripMenuItem.ForeColor = System.Drawing.Color.Salmon;
             this.editRemoveToolStripMenuItem.Name = "editRemoveToolStripMenuItem";
-            this.editRemoveToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.editRemoveToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.editRemoveToolStripMenuItem.Text = "Edit/Remove";
             this.editRemoveToolStripMenuItem.Click += new System.EventHandler(this.editRemoveToolStripMenuItem_Click);
             // 
@@ -127,7 +128,7 @@
             this.mangeStudentFormToolStripMenuItem.BackColor = System.Drawing.Color.LightGray;
             this.mangeStudentFormToolStripMenuItem.ForeColor = System.Drawing.Color.Salmon;
             this.mangeStudentFormToolStripMenuItem.Name = "mangeStudentFormToolStripMenuItem";
-            this.mangeStudentFormToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.mangeStudentFormToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.mangeStudentFormToolStripMenuItem.Text = "Manage Student Form";
             this.mangeStudentFormToolStripMenuItem.Click += new System.EventHandler(this.mangeStudentFormToolStripMenuItem_Click);
             // 
@@ -137,7 +138,7 @@
             this.printToolStripMenuItem.ForeColor = System.Drawing.Color.Salmon;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShowShortcutKeys = false;
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.printToolStripMenuItem.Text = "Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
@@ -151,14 +152,14 @@
             this.printToolStripMenuItem1});
             this.cOURSEToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.cOURSEToolStripMenuItem.Name = "cOURSEToolStripMenuItem";
-            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.cOURSEToolStripMenuItem.Text = "COURSE";
             // 
             // addCourseToolStripMenuItem
             // 
             this.addCourseToolStripMenuItem.BackColor = System.Drawing.Color.MediumTurquoise;
             this.addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
-            this.addCourseToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.addCourseToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.addCourseToolStripMenuItem.Text = "Add New Course";
             this.addCourseToolStripMenuItem.Click += new System.EventHandler(this.addCourseToolStripMenuItem_Click);
             // 
@@ -166,7 +167,7 @@
             // 
             this.editCourseToolStripMenuItem.BackColor = System.Drawing.Color.Aquamarine;
             this.editCourseToolStripMenuItem.Name = "editCourseToolStripMenuItem";
-            this.editCourseToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.editCourseToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.editCourseToolStripMenuItem.Text = "Edit Course";
             this.editCourseToolStripMenuItem.Click += new System.EventHandler(this.editCourseToolStripMenuItem_Click);
             // 
@@ -174,7 +175,7 @@
             // 
             this.removeCourseToolStripMenuItem.BackColor = System.Drawing.Color.MediumAquamarine;
             this.removeCourseToolStripMenuItem.Name = "removeCourseToolStripMenuItem";
-            this.removeCourseToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.removeCourseToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.removeCourseToolStripMenuItem.Text = "Remove Course";
             this.removeCourseToolStripMenuItem.Click += new System.EventHandler(this.removeCourseToolStripMenuItem_Click);
             // 
@@ -182,7 +183,7 @@
             // 
             this.manageCourseToolStripMenuItem.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.manageCourseToolStripMenuItem.Name = "manageCourseToolStripMenuItem";
-            this.manageCourseToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.manageCourseToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.manageCourseToolStripMenuItem.Text = "Manage Course";
             this.manageCourseToolStripMenuItem.Click += new System.EventHandler(this.manageCourseToolStripMenuItem_Click);
             // 
@@ -190,7 +191,7 @@
             // 
             this.printToolStripMenuItem1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
-            this.printToolStripMenuItem1.Size = new System.Drawing.Size(209, 26);
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
             this.printToolStripMenuItem1.Text = "Print";
             this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
             // 
@@ -204,14 +205,14 @@
             this.printToolStripMenuItem2});
             this.sCOREToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.sCOREToolStripMenuItem.Name = "sCOREToolStripMenuItem";
-            this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.sCOREToolStripMenuItem.Text = "SCORE";
             // 
             // addScoreToolStripMenuItem
             // 
             this.addScoreToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
             this.addScoreToolStripMenuItem.Name = "addScoreToolStripMenuItem";
-            this.addScoreToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.addScoreToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.addScoreToolStripMenuItem.Text = "Add Score";
             this.addScoreToolStripMenuItem.Click += new System.EventHandler(this.addScoreToolStripMenuItem_Click);
             // 
@@ -219,7 +220,7 @@
             // 
             this.removeToolStripMenuItem.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.removeToolStripMenuItem.Text = "Remove Score";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
@@ -227,7 +228,7 @@
             // 
             this.manageScoreToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
             this.manageScoreToolStripMenuItem.Name = "manageScoreToolStripMenuItem";
-            this.manageScoreToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.manageScoreToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.manageScoreToolStripMenuItem.Text = "Manage Score";
             this.manageScoreToolStripMenuItem.Click += new System.EventHandler(this.manageScoreToolStripMenuItem_Click);
             // 
@@ -235,7 +236,7 @@
             // 
             this.avgScoreByCourseToolStripMenuItem.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.avgScoreByCourseToolStripMenuItem.Name = "avgScoreByCourseToolStripMenuItem";
-            this.avgScoreByCourseToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
+            this.avgScoreByCourseToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.avgScoreByCourseToolStripMenuItem.Text = "Avg Score By Course";
             this.avgScoreByCourseToolStripMenuItem.Click += new System.EventHandler(this.avgScoreByCourseToolStripMenuItem_Click);
             // 
@@ -243,7 +244,7 @@
             // 
             this.printToolStripMenuItem2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.printToolStripMenuItem2.Name = "printToolStripMenuItem2";
-            this.printToolStripMenuItem2.Size = new System.Drawing.Size(236, 26);
+            this.printToolStripMenuItem2.Size = new System.Drawing.Size(189, 22);
             this.printToolStripMenuItem2.Text = "Print";
             // 
             // rESULTToolStripMenuItem
@@ -253,14 +254,14 @@
             this.staticsToolStripMenuItem1});
             this.rESULTToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.rESULTToolStripMenuItem.Name = "rESULTToolStripMenuItem";
-            this.rESULTToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.rESULTToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.rESULTToolStripMenuItem.Text = "RESULT";
             // 
             // aVGToolStripMenuItem
             // 
             this.aVGToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.aVGToolStripMenuItem.Name = "aVGToolStripMenuItem";
-            this.aVGToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.aVGToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.aVGToolStripMenuItem.Text = "AVG Result By Score";
             this.aVGToolStripMenuItem.Click += new System.EventHandler(this.aVGToolStripMenuItem_Click);
             // 
@@ -268,29 +269,32 @@
             // 
             this.staticsToolStripMenuItem1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.staticsToolStripMenuItem1.Name = "staticsToolStripMenuItem1";
-            this.staticsToolStripMenuItem1.Size = new System.Drawing.Size(235, 26);
+            this.staticsToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.staticsToolStripMenuItem1.Text = "Statics Result";
+            this.staticsToolStripMenuItem1.Click += new System.EventHandler(this.staticsToolStripMenuItem1_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label4.Location = new System.Drawing.Point(12, 424);
+            this.label4.Location = new System.Drawing.Point(9, 344);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 17);
+            this.label4.Size = new System.Drawing.Size(164, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Nguyễn Thị Minh Thư_18128062";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Login.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Main";
             this.Text = "Main";
             this.menuStrip1.ResumeLayout(false);

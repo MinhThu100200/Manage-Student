@@ -14,7 +14,6 @@ C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.ListStudent.resources
 C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.UpdateDeleteStudentForm.resources
 C:\Users\MINH THU\source\repos\Login\Login\obj\Debug\Login.AddAdmin.resources
 D:\repos\Login\Login\obj\Debug\Login.csprojAssemblyReference.cache
-D:\repos\Login\Login\obj\Debug\Login.AddAdmin.resources
 D:\repos\Login\Login\obj\Debug\Login.AddStudent.resources
 D:\repos\Login\Login\obj\Debug\Login.ListStudent.resources
 D:\repos\Login\Login\obj\Debug\Login.LoginForm.resources

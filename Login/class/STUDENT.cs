@@ -176,6 +176,12 @@ namespace Login
                 return false;
             }
         }
+        //get student pass
+        //public int getStudentScore()
+        //{
+            
+
+        //}
         //Total student
         public int totalStudent()
         {

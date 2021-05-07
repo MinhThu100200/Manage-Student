@@ -29,16 +29,27 @@ namespace Login
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlCommand command = new SqlCommand("SELECT co.Label, sc.Score_student FROM Course as co, Score as sc " +
-                "WHERE sc.Course_id = co.Id and sc.Student_id =" +id, db.getConnection);
+                "WHERE sc.Course_id = co.Id and sc.Student_id =" + id, db.getConnection);
             DataTable dt = new DataTable();
             adapter.SelectCommand = command;
             adapter.Fill(dt);
             return dt;
         }
-        public DataTable searchStudentScore(int id, string fname)
+        public DataTable getAvgScoreByStudent(int id)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("SELECT * FROM Student WHERE CONCAT(Firstname,' ',Lastname,' ',Address) LIKE '%" +  + "%'", db.getConnection);
+            SqlCommand command = new SqlCommand("SELECT AVG(sc.Score_student) FROM Course as co, Score as sc " +
+                "WHERE sc.Course_id = co.Id and sc.Student_id =" + id + "GROUP BY sc.Student_id", db.getConnection);
+            DataTable dt = new DataTable();
+            adapter.SelectCommand = command;
+            adapter.Fill(dt);
+            return dt;
+
+        }
+        public DataTable searchStudentScore(string search)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("SELECT * FROM Student WHERE CONCAT(Firstname,' ',Lastname,' ',Address) LIKE '%" +  search + "%'", db.getConnection);
             DataTable dt = new DataTable();
             adapter.SelectCommand = command;
             adapter.Fill(dt);

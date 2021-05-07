@@ -112,5 +112,11 @@ namespace Login
             AvgResultByScoreForm frm = new AvgResultByScoreForm();
             frm.ShowDialog();
         }
+
+        private void staticsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            StaticsResultForm frm = new StaticsResultForm();
+            frm.ShowDialog();
+        }
     }
 }

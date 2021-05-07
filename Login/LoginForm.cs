@@ -113,13 +113,14 @@ namespace Login
 
         }
 
-        private void btnSigUp_Click(object sender, EventArgs e)
-        {
-            AddAdmin form = new AddAdmin();
-            form.ShowDialog();
-        }
+        
 
         private void txtUsername_Validated(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonSignUp_Click(object sender, EventArgs e)
         {
            
         }
