@@ -215,6 +215,18 @@
     <Compile Include="Student\UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Contacts\AddContactsForm.resx">
+      <DependentUpon>AddContactsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\ContactForm.resx">
+      <DependentUpon>ContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\EditContactsForm.resx">
+      <DependentUpon>EditContactsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\ShowFullListContactsForm.resx">
+      <DependentUpon>ShowFullListContactsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Course\AddCourseForm.resx">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </EmbeddedResource>

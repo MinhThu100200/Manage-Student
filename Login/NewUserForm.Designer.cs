@@ -30,7 +30,7 @@ namespace Login
         private void InitializeComponent()
         {
             this.btnUploadImage = new System.Windows.Forms.Button();
-            this.pictureBoxStudent = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,28 +52,28 @@ namespace Login
             this.label9 = new System.Windows.Forms.Label();
             this.labelSignUp = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUploadImage
             // 
             this.btnUploadImage.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnUploadImage.Location = new System.Drawing.Point(139, 634);
+            this.btnUploadImage.Location = new System.Drawing.Point(139, 630);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(264, 29);
             this.btnUploadImage.TabIndex = 33;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
             // 
-            // pictureBoxStudent
+            // pictureBoxImg
             // 
-            this.pictureBoxStudent.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBoxStudent.Location = new System.Drawing.Point(139, 464);
-            this.pictureBoxStudent.Name = "pictureBoxStudent";
-            this.pictureBoxStudent.Size = new System.Drawing.Size(264, 164);
-            this.pictureBoxStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxStudent.TabIndex = 32;
-            this.pictureBoxStudent.TabStop = false;
+            this.pictureBoxImg.BackColor = System.Drawing.Color.SkyBlue;
+            this.pictureBoxImg.Location = new System.Drawing.Point(139, 464);
+            this.pictureBoxImg.Name = "pictureBoxImg";
+            this.pictureBoxImg.Size = new System.Drawing.Size(264, 164);
+            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImg.TabIndex = 32;
+            this.pictureBoxImg.TabStop = false;
             // 
             // buttonAdd
             // 
@@ -293,7 +293,7 @@ namespace Login
             this.Controls.Add(this.label9);
             this.Controls.Add(this.richTextBoxAddress);
             this.Controls.Add(this.btnUploadImage);
-            this.Controls.Add(this.pictureBoxStudent);
+            this.Controls.Add(this.pictureBoxImg);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.label8);
@@ -308,7 +308,7 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Name = "NewUserForm";
             this.Text = "NewUserForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,7 +317,7 @@ namespace Login
         #endregion
 
         private System.Windows.Forms.Button btnUploadImage;
-        private System.Windows.Forms.PictureBox pictureBoxStudent;
+        private System.Windows.Forms.PictureBox pictureBoxImg;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label8;
