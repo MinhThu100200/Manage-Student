@@ -41,7 +41,7 @@ namespace Login
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtIdStudent = new System.Windows.Forms.TextBox();
+            this.txtIdContact = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -97,6 +97,7 @@ namespace Login
             this.btnUploadImage.TabIndex = 8;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
             // pictureBoxImg
             // 
@@ -118,6 +119,7 @@ namespace Login
             this.buttonAdd.TabIndex = 9;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonCancel
             // 
@@ -129,6 +131,7 @@ namespace Login
             this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // label8
             // 
@@ -162,12 +165,12 @@ namespace Login
             this.txtPhone.Size = new System.Drawing.Size(302, 22);
             this.txtPhone.TabIndex = 6;
             // 
-            // txtIdStudent
+            // txtIdContact
             // 
-            this.txtIdStudent.Location = new System.Drawing.Point(150, 28);
-            this.txtIdStudent.Name = "txtIdStudent";
-            this.txtIdStudent.Size = new System.Drawing.Size(302, 22);
-            this.txtIdStudent.TabIndex = 2;
+            this.txtIdContact.Location = new System.Drawing.Point(150, 28);
+            this.txtIdContact.Name = "txtIdContact";
+            this.txtIdContact.Size = new System.Drawing.Size(302, 22);
+            this.txtIdContact.TabIndex = 2;
             // 
             // label7
             // 
@@ -263,7 +266,7 @@ namespace Login
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtIdStudent);
+            this.Controls.Add(this.txtIdContact);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -271,6 +274,7 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Name = "AddContactsForm";
             this.Text = "AddContactsForm";
+            this.Load += new System.EventHandler(this.AddContactsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,7 +294,7 @@ namespace Login
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtIdStudent;
+        private System.Windows.Forms.TextBox txtIdContact;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;

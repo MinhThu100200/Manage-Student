@@ -33,6 +33,7 @@ namespace Login
         {
             try
             {
+                
                 string fname = txtFirstName.Text;
                 string lname = txtLastName.Text;
                 string username = textBoxUsername.Text;
@@ -42,7 +43,7 @@ namespace Login
                 string addr = richTextBoxAddress.Text;
 
                 MemoryStream pic = new MemoryStream();
-                if ((!user.checkUser(username, "sign in")) && verify())
+                if ((user.checkUser(username, "signup") == false) && verify() == true)
                 {
                     pictureBoxImg.Image.Save(pic, pictureBoxImg.Image.RawFormat);
                     if(user.insertUser(fname, lname, username, password, email, phone, addr, pic))
@@ -56,7 +57,7 @@ namespace Login
                 }  
                 else
                 {
-
+                    MessageBox.Show("You must fill all of them or Your username existed", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }    
             }
             catch (Exception ex)
@@ -72,7 +73,6 @@ namespace Login
                 (txtLastName.Text.Trim() == "") ||
                 (txtPhone.Text.Trim() == "") ||
                 (richTextBoxAddress.Text.Trim() == "") ||
-                (txtIdStudent.Text.Trim() == "") ||
                 (pictureBoxImg.Image == null)||
                 (textBoxUsername.Text.Trim() == "")||
                 (textBoxPassword.Text.Trim() == "")||

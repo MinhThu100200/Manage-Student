@@ -137,6 +137,7 @@ namespace Login
             this.buttonCancel.TabIndex = 60;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonEdit
             // 
@@ -148,6 +149,7 @@ namespace Login
             this.buttonEdit.TabIndex = 58;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // pictureBoxImg
             // 
@@ -168,6 +170,7 @@ namespace Login
             this.btnUploadImage.TabIndex = 57;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
             // label9
             // 
@@ -282,6 +285,7 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Name = "EditUserForm";
             this.Text = "EditUserForm";
+            this.Load += new System.EventHandler(this.EditUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
