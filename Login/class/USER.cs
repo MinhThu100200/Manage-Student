@@ -59,9 +59,9 @@ namespace Login
             return tb;
         }
 
-        //check exist user for insert
+        //check exist user 
 
-        public bool checkUserInsert(string username, int id, string operation)
+        public bool checkUser(string username, int id, string operation)
         {
             string query = "";
             if (operation == "sign up")

@@ -69,7 +69,7 @@
     <Compile Include="Contacts\EditContactsForm.Designer.cs">
       <DependentUpon>EditContactsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GROUP.cs" />
+    <Compile Include="class\GROUP.cs" />
     <Compile Include="NewUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,7 +158,6 @@
     <Compile Include="Contacts\ShowFullListContactsForm.Designer.cs">
       <DependentUpon>ShowFullListContactsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SqlAdapter.cs" />
     <Compile Include="StaticsResultForm.cs">
       <SubType>Form</SubType>
     </Compile>

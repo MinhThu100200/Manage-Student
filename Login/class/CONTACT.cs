@@ -92,6 +92,39 @@ namespace Login
             }
         }
 
+        //check exist contact
+        public bool checkContact(int id, string operation)
+        {
+            string query = "";
+            if(operation == "add")
+            {
+                query = "SELECT * FROM Contact WHERE Id=@id";
+
+            }
+            else if(operation == "edit")
+            {
+                query = "SELECT * FROM Contact WHERE Id != @id";
+            }
+
+            SqlCommand command = new SqlCommand(query, db.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+
+            DataTable dt = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+
+            if(dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
         //get full list contact
         public DataTable selectContactList(SqlCommand command)
         {
