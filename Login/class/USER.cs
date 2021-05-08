@@ -68,9 +68,9 @@ namespace Login
             {
                 query = "SELECT * FROM User WHERE Id = @id OR Username = @username";
             }
-            else
+            else if (operation == "edit")
             {
-                query = "SELECT * FROM User WHERE Id = @id AND Username = @username";
+                query = "SELECT * FROM User WHERE Id != @id AND Username = @username";
             }
 
             SqlDataAdapter adapter = new SqlDataAdapter();

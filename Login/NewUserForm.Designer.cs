@@ -61,7 +61,7 @@ namespace Login
             this.btnUploadImage.Location = new System.Drawing.Point(159, 630);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(302, 29);
-            this.btnUploadImage.TabIndex = 33;
+            this.btnUploadImage.TabIndex = 31;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
             // 
@@ -82,7 +82,7 @@ namespace Login
             this.buttonAdd.Location = new System.Drawing.Point(313, 689);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(147, 35);
-            this.buttonAdd.TabIndex = 30;
+            this.buttonAdd.TabIndex = 32;
             this.buttonAdd.Text = "Sign Up";
             this.buttonAdd.UseVisualStyleBackColor = false;
             // 
@@ -93,7 +93,7 @@ namespace Login
             this.buttonCancel.Location = new System.Drawing.Point(37, 689);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(147, 35);
-            this.buttonCancel.TabIndex = 29;
+            this.buttonCancel.TabIndex = 33;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
             // 
@@ -113,26 +113,28 @@ namespace Login
             this.txtFirstName.Location = new System.Drawing.Point(158, 114);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(302, 22);
-            this.txtFirstName.TabIndex = 27;
+            this.txtFirstName.TabIndex = 24;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(158, 156);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(302, 22);
-            this.txtLastName.TabIndex = 26;
+            this.txtLastName.TabIndex = 25;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(158, 317);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(302, 22);
-            this.txtPhone.TabIndex = 25;
+            this.txtPhone.TabIndex = 29;
             // 
             // txtIdStudent
             // 
+            this.txtIdStudent.Enabled = false;
             this.txtIdStudent.Location = new System.Drawing.Point(158, 73);
             this.txtIdStudent.Name = "txtIdStudent";
+            this.txtIdStudent.ReadOnly = true;
             this.txtIdStudent.Size = new System.Drawing.Size(302, 22);
             this.txtIdStudent.TabIndex = 24;
             // 
@@ -196,7 +198,7 @@ namespace Login
             this.richTextBoxAddress.Location = new System.Drawing.Point(159, 360);
             this.richTextBoxAddress.Name = "richTextBoxAddress";
             this.richTextBoxAddress.Size = new System.Drawing.Size(301, 84);
-            this.richTextBoxAddress.TabIndex = 34;
+            this.richTextBoxAddress.TabIndex = 30;
             this.richTextBoxAddress.Text = "";
             // 
             // textBoxPassword
@@ -204,21 +206,21 @@ namespace Login
             this.textBoxPassword.Location = new System.Drawing.Point(158, 235);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(302, 22);
-            this.textBoxPassword.TabIndex = 40;
+            this.textBoxPassword.TabIndex = 27;
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(158, 273);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(302, 22);
-            this.textBoxEmail.TabIndex = 39;
+            this.textBoxEmail.TabIndex = 28;
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Location = new System.Drawing.Point(158, 196);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(302, 22);
-            this.textBoxUsername.TabIndex = 38;
+            this.textBoxUsername.TabIndex = 26;
             // 
             // label4
             // 
@@ -262,7 +264,7 @@ namespace Login
             this.labelSignUp.Location = new System.Drawing.Point(129, 738);
             this.labelSignUp.Name = "labelSignUp";
             this.labelSignUp.Size = new System.Drawing.Size(212, 17);
-            this.labelSignUp.TabIndex = 41;
+            this.labelSignUp.TabIndex = 34;
             this.labelSignUp.Text = "<<Have an account> Sign In";
             this.labelSignUp.Click += new System.EventHandler(this.labelSignUp_Click);
             // 

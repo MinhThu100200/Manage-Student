@@ -57,7 +57,7 @@ namespace Login
             this.textBoxEmail.Location = new System.Drawing.Point(150, 197);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(302, 22);
-            this.textBoxEmail.TabIndex = 60;
+            this.textBoxEmail.TabIndex = 5;
             // 
             // label4
             // 
@@ -85,7 +85,7 @@ namespace Login
             this.richTextBoxAddress.Location = new System.Drawing.Point(151, 284);
             this.richTextBoxAddress.Name = "richTextBoxAddress";
             this.richTextBoxAddress.Size = new System.Drawing.Size(301, 84);
-            this.richTextBoxAddress.TabIndex = 55;
+            this.richTextBoxAddress.TabIndex = 7;
             this.richTextBoxAddress.Text = "";
             // 
             // btnUploadImage
@@ -94,7 +94,7 @@ namespace Login
             this.btnUploadImage.Location = new System.Drawing.Point(151, 554);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(302, 29);
-            this.btnUploadImage.TabIndex = 54;
+            this.btnUploadImage.TabIndex = 8;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
             // 
@@ -115,7 +115,7 @@ namespace Login
             this.buttonAdd.Location = new System.Drawing.Point(305, 613);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(147, 35);
-            this.buttonAdd.TabIndex = 52;
+            this.buttonAdd.TabIndex = 9;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
             // 
@@ -126,7 +126,7 @@ namespace Login
             this.buttonCancel.Location = new System.Drawing.Point(29, 613);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(147, 35);
-            this.buttonCancel.TabIndex = 51;
+            this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
             // 
@@ -146,28 +146,28 @@ namespace Login
             this.txtFirstName.Location = new System.Drawing.Point(150, 69);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(302, 22);
-            this.txtFirstName.TabIndex = 49;
+            this.txtFirstName.TabIndex = 3;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(150, 113);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(302, 22);
-            this.txtLastName.TabIndex = 48;
+            this.txtLastName.TabIndex = 4;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(150, 241);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(302, 22);
-            this.txtPhone.TabIndex = 47;
+            this.txtPhone.TabIndex = 6;
             // 
             // txtIdStudent
             // 
             this.txtIdStudent.Location = new System.Drawing.Point(150, 28);
             this.txtIdStudent.Name = "txtIdStudent";
             this.txtIdStudent.Size = new System.Drawing.Size(302, 22);
-            this.txtIdStudent.TabIndex = 46;
+            this.txtIdStudent.TabIndex = 2;
             // 
             // label7
             // 
@@ -241,7 +241,7 @@ namespace Login
             this.comboBoxGroup.Location = new System.Drawing.Point(151, 152);
             this.comboBoxGroup.Name = "comboBoxGroup";
             this.comboBoxGroup.Size = new System.Drawing.Size(301, 24);
-            this.comboBoxGroup.TabIndex = 63;
+            this.comboBoxGroup.TabIndex = 1;
             // 
             // AddContactsForm
             // 

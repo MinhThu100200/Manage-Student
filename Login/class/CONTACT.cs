@@ -14,10 +14,11 @@ namespace Login
         MY_DB db = new MY_DB();
         
         //insert contact
-        public bool insertContact(int id, string fname, string lname, int group_id, string email, string phone, string addr, MemoryStream img)
+        public bool insertContact(int id, string fname, string lname, int group_id, string email, string phone, string addr, MemoryStream img, int user_id)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("INSERT INTO Contact (Id, Firstname, Lastname, Group_id, Email, Phone, Address, Picture ) VALUES (@id, @fname, @lname, @group_id, @email, @phone, @addr, @img)", db.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO Contact (Id, Firstname, Lastname, Group_id, Email, Phone, Address, Picture, User_id ) VALUES (@id, @fname, @lname, @group_id, @email, " +
+                "@phone, @addr, @img, @user_id)", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@fname", SqlDbType.NVarChar).Value = fname;
             command.Parameters.Add("@lname", SqlDbType.NVarChar).Value = lname;
@@ -26,6 +27,7 @@ namespace Login
             command.Parameters.Add("@phone", SqlDbType.NChar).Value = phone;
             command.Parameters.Add("@addr", SqlDbType.Text).Value = addr;
             command.Parameters.Add("@img", SqlDbType.Image).Value = img.ToArray();
+            command.Parameters.Add("@user_id", SqlDbType.Int).Value = user_id;
             adapter.InsertCommand = command;
             db.openConnection();
 
@@ -73,7 +75,7 @@ namespace Login
         //delete contact
         public bool deleteContact(int id)
         {          
-            SqlCommand command = new SqlCommand("DELETE FROM Contact Id=@id", db.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM Contact WHERE Id=@id", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;           
             
             db.openConnection();
