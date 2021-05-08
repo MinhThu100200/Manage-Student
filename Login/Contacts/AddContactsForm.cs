@@ -91,14 +91,13 @@ namespace Login
             int user_id = Global.GlobalUserID;
             try
             {
-
                 int group_id = (int)comboBoxGroup.SelectedValue;
                 MemoryStream pic = new MemoryStream();
                 pictureBoxImg.Image.Save(pic, pictureBoxImg.Image.RawFormat);
 
                 if ((verify() == true) && contact.checkContact(id, "add") == false)
                 {
-                    if (contact.insertContact(id, fname, lname, phone, addr, email, userid, groupid, pic))
+                    if (contact.insertContact(id, fname, lname, group_id, email, phone, addr, pic, user_id))
                     {
                         MessageBox.Show("New Contact Added", "Add Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -112,11 +111,11 @@ namespace Login
                     MessageBox.Show("This ID Already Exists, Try Another One", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
-            }
+            }          
+            catch 
+            { 
 
-
             }
-            catch { }
 
 
         }
