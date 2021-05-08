@@ -330,6 +330,7 @@ namespace Login
             this.labelEditUser.Size = new System.Drawing.Size(81, 17);
             this.labelEditUser.TabIndex = 13;
             this.labelEditUser.Text = "Edit my Info";
+            this.labelEditUser.Click += new System.EventHandler(this.labelEditUser_Click);
             // 
             // labelLogOut
             // 
@@ -341,6 +342,7 @@ namespace Login
             this.labelLogOut.Size = new System.Drawing.Size(59, 17);
             this.labelLogOut.TabIndex = 14;
             this.labelLogOut.Text = "Log Out";
+            this.labelLogOut.Click += new System.EventHandler(this.labelLogOut_Click);
             // 
             // labelWelcome
             // 
@@ -354,11 +356,11 @@ namespace Login
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.label8.Font = new System.Drawing.Font("Tahoma", 25F);
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(14, 12);
+            this.label8.Location = new System.Drawing.Point(12, 36);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(338, 57);
+            this.label8.Size = new System.Drawing.Size(454, 81);
             this.label8.TabIndex = 15;
             this.label8.Text = "HUMAN RESOURCE";
             // 

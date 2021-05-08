@@ -48,3 +48,5 @@ D:\repos\Login\Login\obj\Debug\Login.EditContactsForm.resources
 D:\repos\Login\Login\obj\Debug\Login.SelectContactsForm.resources
 D:\repos\Login\Login\obj\Debug\Login.ShowFullListContactsForm.resources
 D:\repos\Login\Login\obj\Debug\Login.NewUserForm.resources
+D:\repos\Login\Login\obj\Debug\Login.AboutMeForm.resources
+D:\repos\Login\Login\obj\Debug\Login.EditUserForm.resources

@@ -95,10 +95,9 @@ namespace Login
         }
 
         //check exist group
-        public bool checkGroup(int id, string name, int user_id, string operation)
+        public bool checkGroup(string name, string operation, int id = 0,  int user_id = 0)
         {
-           // id = 0;
-           // user_id = 0;
+           
             string query = "";
             SqlCommand command = new SqlCommand();
             if(operation == "add")

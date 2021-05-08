@@ -14,19 +14,21 @@ namespace Login
         MY_DB db = new MY_DB();
 
         //Add user
-        public bool insertUser(int id, string fname, string lname, string username, string password, string email, string phone, string addr, MemoryStream img)
+        public bool insertUser(string fname, string lname, string username, string password, string email, string phone, string addr, MemoryStream img)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("INSERT INTO Users (Id, Firstname, Lastname, Username, Password, Email, Phone, Address, Picture ) VALUES (@id, @fname, @lname, @username, @password, @email, @phone, @addr, @img)", db.getConnection);
-            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            SqlCommand command = new SqlCommand("INSERT INTO Users (Firstname, Lastname, Username, Password, Email, Phone, Address, Picture ) VALUES (@fname, " +
+                "@lname, @username, @password, @email, @phone, @addr, @img)", db.getConnection);
+            
             command.Parameters.Add("@fname", SqlDbType.NVarChar).Value = fname;
             command.Parameters.Add("@lname", SqlDbType.NVarChar).Value = lname;
             command.Parameters.Add("@username", SqlDbType.NChar).Value = username;
             command.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
             command.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
             command.Parameters.Add("@phone", SqlDbType.NChar).Value = phone;
-            command.Parameters.Add("@addr", SqlDbType.Text).Value = addr;
+            command.Parameters.Add("@addr", SqlDbType.NVarChar).Value = addr;
             command.Parameters.Add("@img", SqlDbType.Image).Value = img.ToArray();
+
             adapter.InsertCommand = command;
             db.openConnection();
 
@@ -61,26 +63,28 @@ namespace Login
 
         //check exist user 
 
-        public bool checkUser(string username, int id, string operation)
+        public bool checkUser(string username, string operation, int id = 0)
         {
             string query = "";
+            SqlCommand command = new SqlCommand();
             if (operation == "sign up")
             {
-                query = "SELECT * FROM Users WHERE Id = @id OR Username = @username";
+                query = "SELECT * FROM Users WHERE Username = @username";
+                command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
             }
             else if (operation == "edit")
             {
                 query = "SELECT * FROM Users WHERE Id != @id AND Username = @username";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
             }
+
+            command.Connection = db.getConnection;
+            command.CommandText = query;
 
             SqlDataAdapter adapter = new SqlDataAdapter();
 
             DataTable tb = new DataTable();
-
-            SqlCommand command = new SqlCommand(query, db.getConnection);
-
-            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
-            command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
 
             adapter.SelectCommand = command;
             adapter.Fill(tb);

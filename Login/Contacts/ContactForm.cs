@@ -40,5 +40,18 @@ namespace Login
             SelectContactsForm frm = new SelectContactsForm();
             frm.ShowDialog();
         }
+
+        private void labelEditUser_Click(object sender, EventArgs e)
+        {
+            EditUserForm frm = new EditUserForm();
+            frm.ShowDialog();
+        }
+
+        private void labelLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm frm = new LoginForm();
+            frm.ShowDialog();
+        }
     }
 }

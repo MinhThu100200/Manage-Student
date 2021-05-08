@@ -29,41 +29,53 @@ namespace Login
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             STUDENT student = new STUDENT();
-            int id = Convert.ToInt32(txtIdStudent.Text);
-            string fname = txtFirstName.Text;
-            string lnaem = txtLastName.Text;
-            DateTime bdate = dateTimePickerBirthDate.Value;
-            string phone = txtPhone.Text;
-            string adrs = txtAddress.Text;
-            string gender = "Male";
-            
-            //gender
-            if (radioButtonFemale.Checked)
+            try
             {
-                gender = "Female";
-            }
+                int id = Convert.ToInt32(txtIdStudent.Text);
+                string fname = txtFirstName.Text;
+                string lnaem = txtLastName.Text;
+                DateTime bdate = dateTimePickerBirthDate.Value;
+                string phone = txtPhone.Text;
+                string adrs = txtAddress.Text;
+                string gender = "Male";
 
-            MemoryStream pic = new MemoryStream();
-            int born_year = dateTimePickerBirthDate.Value.Year;
-            int this_year = DateTime.Now.Year;
-
-            //check age
-            if ( ((this_year - born_year) < 10) || ((this_year - born_year) > 100) )
-            {
-                MessageBox.Show("The student age must be between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }    
-            else if (verify())
-            {
-                pictureBoxStudent.Image.Save(pic, pictureBoxStudent.Image.RawFormat);
-                if (student.insertStudent(id, fname, lnaem, bdate, gender, phone, adrs, pic))
+                //gender
+                if (radioButtonFemale.Checked)
                 {
-                    MessageBox.Show("New student Added", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }  
+                    gender = "Female";
+                }
+
+                MemoryStream pic = new MemoryStream();
+                int born_year = dateTimePickerBirthDate.Value.Year;
+                int this_year = DateTime.Now.Year;
+
+                //check age
+                if (((this_year - born_year) < 10) || ((this_year - born_year) > 100))
+                {
+                    MessageBox.Show("The student age must be between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (verify())
+                {
+                    pictureBoxStudent.Image.Save(pic, pictureBoxStudent.Image.RawFormat);
+                    if (student.insertStudent(id, fname, lnaem, bdate, gender, phone, adrs, pic))
+                    {
+                        MessageBox.Show("New student Added", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
                 else
                 {
-                    MessageBox.Show("Error", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }                    
-            }    
+                    MessageBox.Show("You must fill in all of them", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+
+            }
+            
         }
 
         //Check input

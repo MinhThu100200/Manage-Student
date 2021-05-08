@@ -67,6 +67,7 @@ namespace Login
                 else
                 {
                     MessageBox.Show("You must choose STUDENT or HUMAN RESOURCE", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.Show();
                 }
             }    
             else
