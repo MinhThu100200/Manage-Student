@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CONTACT.cs" />
     <Compile Include="Contacts\AddContactsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,7 +175,7 @@
     <Compile Include="Student\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="class\Admin.cs" />
+    <Compile Include="class\USER.cs" />
     <Compile Include="Student\PrintForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -42,3 +42,9 @@ D:\repos\Login\Login\obj\Debug\Login.AvgScoreForm.resources
 D:\repos\Login\Login\obj\Debug\Login.AvgResultByScoreForm.resources
 D:\repos\Login\Login\obj\Debug\Login.ChartResultForm.resources
 D:\repos\Login\Login\obj\Debug\Login.StaticsResultForm.resources
+D:\repos\Login\Login\obj\Debug\Login.AddContactsForm.resources
+D:\repos\Login\Login\obj\Debug\Login.ContactForm.resources
+D:\repos\Login\Login\obj\Debug\Login.EditContactsForm.resources
+D:\repos\Login\Login\obj\Debug\Login.SelectContactsForm.resources
+D:\repos\Login\Login\obj\Debug\Login.ShowFullListContactsForm.resources
+D:\repos\Login\Login\obj\Debug\Login.NewUserForm.resources
