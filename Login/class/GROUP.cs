@@ -16,7 +16,7 @@ namespace Login
         public bool insertGroup(int id, string name, int user_id)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("INSERT INTO Group (Id, name, User_id ) VALUES (@id, @name, @user_id)", db.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO Groups (Id, name, User_id ) VALUES (@id, @name, @user_id)", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@fname", SqlDbType.NVarChar).Value = name;
             command.Parameters.Add("@user_id", SqlDbType.Int).Value = user_id;      
@@ -41,7 +41,7 @@ namespace Login
         public bool updateGroup(int id, string name)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("UPDATE Group SET name=@name WHERE Id=@id", db.getConnection);
+            SqlCommand command = new SqlCommand("UPDATE Groups SET name=@name WHERE Id=@id", db.getConnection);
 
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@fname", SqlDbType.NVarChar).Value = name;
@@ -65,7 +65,7 @@ namespace Login
         //delete group
         public bool deleteGroup(int id)
         {         
-            SqlCommand command = new SqlCommand("DELETE FROM Group WHERE Id=@id", db.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM Groups WHERE Id=@id", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
 
             db.openConnection();
@@ -86,7 +86,7 @@ namespace Login
         //get group of userid
         public DataTable getGroupByUserId(int user_id)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM Group WHERE User_id=" + user_id, db.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM Groups WHERE User_id=" + user_id, db.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable tb = new DataTable();
 
@@ -103,14 +103,14 @@ namespace Login
             SqlCommand command = new SqlCommand();
             if(operation == "add")
             {
-                query = "SELECT * FROM Group WHERE Id=@id AND Name=@name";
+                query = "SELECT * FROM Groups WHERE Id=@id AND Name=@name";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
                 
             }
             else if(operation == "edit")
             {
-                query = "SELECT * FROM Group WHERE Id != @id AND User_id=@user_id AND Name=@name";
+                query = "SELECT * FROM Groups WHERE Id != @id AND User_id=@user_id AND Name=@name";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 command.Parameters.Add("@user_id", SqlDbType.Int).Value = user_id;
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;

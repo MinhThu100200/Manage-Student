@@ -39,20 +39,35 @@ namespace Login
             MY_DB db = new MY_DB();
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable dt = new DataTable();
-            SqlCommand command = new SqlCommand("SELECT * FROM Admin WHERE Username = @User AND Password = @Pass", db.getConnection);
-            command.Parameters.Add("@User", SqlDbType.NVarChar).Value = txtUsername.Text;
-            command.Parameters.Add("@Pass", SqlDbType.NVarChar).Value = txtPassword.Text;
+            SqlCommand command = new SqlCommand("SELECT * FROM Users WHERE Username = @username AND Password = @password", db.getConnection);
+            command.Parameters.Add("@username", SqlDbType.NVarChar).Value = txtUsername.Text;
+            command.Parameters.Add("@password", SqlDbType.NVarChar).Value = txtPassword.Text;
+
             adapter.SelectCommand = command;
             adapter.Fill(dt);
 
 
             if ((dt.Rows.Count > 0))
             {
+                int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
+                Global.SetGlobalUserID(userid);
                 this.DialogResult = DialogResult.OK;
-                MessageBox.Show("Bắt đầu nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Bắt đầu nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                Main main = new Main();              
-                main.ShowDialog();
+                if (radioButtonHuman.Checked)
+                {
+                    ContactForm frm = new ContactForm();
+                    frm.ShowDialog();
+                }
+                else if( radioButtonStudent.Checked)
+                {
+                    Main main = new Main();
+                    main.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("You must choose STUDENT or HUMAN RESOURCE", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }    
             else
             {
@@ -120,14 +135,20 @@ namespace Login
            
         }
 
-        private void buttonSignUp_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void labelNewUser_Click(object sender, EventArgs e)
         {
             NewUserForm frm = new NewUserForm();
+            frm.ShowDialog();
+        }
+
+        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+        }
+
+        private void labelAboutMe_Click(object sender, EventArgs e)
+        {
+            AboutMeForm frm = new AboutMeForm();
             frm.ShowDialog();
         }
     }
