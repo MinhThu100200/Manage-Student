@@ -17,7 +17,7 @@ namespace Login
         public bool insertUser(int id, string fname, string lname, string username, string password, string email, string phone, string addr, MemoryStream img)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("INSERT INTO Login (Id, Firstname, Lastname, Username, Password, Email, Phone, Address, Picture ) VALUES (@id, @fname, @lname, @username, @password, @email, @phone, @addr, @img)", db.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO User (Id, Firstname, Lastname, Username, Password, Email, Phone, Address, Picture ) VALUES (@id, @fname, @lname, @username, @password, @email, @phone, @addr, @img)", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@fname", SqlDbType.NVarChar).Value = fname;
             command.Parameters.Add("@lname", SqlDbType.NVarChar).Value = lname;
@@ -99,7 +99,7 @@ namespace Login
         public bool updateUser(int id, string fname, string lname, string username, string password, string email, string phone, string addr, MemoryStream img)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("UPDATE Login SET Firstname=@fname, Lastname=@lname, Username=@username, Password=@password," +
+            SqlCommand command = new SqlCommand("UPDATE User SET Firstname=@fname, Lastname=@lname, Username=@username, Password=@password," +
                 " Email=@email, Phone=@phone, Address=@addr, Picture=@img", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@fname", SqlDbType.NVarChar).Value = fname;
