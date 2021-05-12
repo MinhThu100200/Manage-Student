@@ -37,7 +37,6 @@ namespace Login
             this.label4 = new System.Windows.Forms.Label();
             this.listBoxAvailable = new System.Windows.Forms.ListBox();
             this.buttonSelect = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
             this.listBoxSelected = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -73,10 +72,14 @@ namespace Login
             // comboBoxSemester
             // 
             this.comboBoxSemester.FormattingEnabled = true;
+            this.comboBoxSemester.Items.AddRange(new object[] {
+            "HKI",
+            "HKII"});
             this.comboBoxSemester.Location = new System.Drawing.Point(462, 42);
             this.comboBoxSemester.Name = "comboBoxSemester";
             this.comboBoxSemester.Size = new System.Drawing.Size(92, 24);
             this.comboBoxSemester.TabIndex = 3;
+            this.comboBoxSemester.SelectedIndexChanged += new System.EventHandler(this.comboBoxSemester_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -111,26 +114,16 @@ namespace Login
             // 
             // buttonSelect
             // 
-            this.buttonSelect.BackColor = System.Drawing.Color.DimGray;
+            this.buttonSelect.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSelect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSelect.Location = new System.Drawing.Point(241, 192);
+            this.buttonSelect.Location = new System.Drawing.Point(240, 242);
             this.buttonSelect.Name = "buttonSelect";
-            this.buttonSelect.Size = new System.Drawing.Size(107, 28);
+            this.buttonSelect.Size = new System.Drawing.Size(107, 40);
             this.buttonSelect.TabIndex = 7;
             this.buttonSelect.Text = "Add";
             this.buttonSelect.UseVisualStyleBackColor = false;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.buttonSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSave.Location = new System.Drawing.Point(241, 296);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(107, 28);
-            this.buttonSave.TabIndex = 8;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSelect.Click += new System.EventHandler(this.buttonSelect_Click);
             // 
             // listBoxSelected
             // 
@@ -148,7 +141,6 @@ namespace Login
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(582, 334);
             this.Controls.Add(this.listBoxSelected);
-            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonSelect);
             this.Controls.Add(this.listBoxAvailable);
             this.Controls.Add(this.label4);
@@ -168,14 +160,13 @@ namespace Login
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxIdStusent;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxSemester;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox listBoxAvailable;
         private System.Windows.Forms.Button buttonSelect;
-        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.ListBox listBoxSelected;
+        public System.Windows.Forms.TextBox textBoxIdStusent;
     }
 }

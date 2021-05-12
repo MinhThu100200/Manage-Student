@@ -188,6 +188,13 @@ namespace Login
         private void buttonAddCourse_Click(object sender, EventArgs e)
         {
             AddCourseStudentForm frm = new AddCourseStudentForm();
+            
+
+            try
+            {
+                frm.textBoxIdStusent.Text = txtStudentId.Text;
+            }
+            catch { }
             frm.ShowDialog();
         }
     }

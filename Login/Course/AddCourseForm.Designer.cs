@@ -131,6 +131,9 @@ namespace Login
             // comboBoxSemester
             // 
             this.comboBoxSemester.FormattingEnabled = true;
+            this.comboBoxSemester.Items.AddRange(new object[] {
+            "HKI",
+            "HKII"});
             this.comboBoxSemester.Location = new System.Drawing.Point(359, 24);
             this.comboBoxSemester.Name = "comboBoxSemester";
             this.comboBoxSemester.Size = new System.Drawing.Size(92, 24);
@@ -166,6 +169,7 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Name = "AddCourseForm";
             this.Text = "AddCourseForm";
+            this.Load += new System.EventHandler(this.AddCourseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPeriod)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

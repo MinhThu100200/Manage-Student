@@ -49,7 +49,7 @@ namespace Login
                 labelFail.Text = ("Fail: " + (float)100 * (allStudents.Rows.Count - dem) / allStudents.Rows.Count);
                 
             }
-            catch(Exception ex)
+            catch(Exception )
             {
 
             }

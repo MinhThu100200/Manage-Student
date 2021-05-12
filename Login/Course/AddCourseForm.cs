@@ -26,13 +26,14 @@ namespace Login
                 string label = txtLabel.Text;
                 string description = richTextBoxDescription.Text;
                 int period = (int)numericUpDownPeriod.Value;
+                string semes = comboBoxSemester.SelectedItem.ToString();
                 if (course.checkId(id) == true)
                 {
                     MessageBox.Show("ID đã tồn tại", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    if (verify() == true && course.insertCourse(id, label, period, description) == true)
+                    if (verify() == true && course.insertCourse(id, label, period, description, semes) == true)
                     {
                         MessageBox.Show("New Course Added", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -59,6 +60,11 @@ namespace Login
             {
                 return true;
             }
+        }
+
+        private void AddCourseForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

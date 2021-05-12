@@ -29,13 +29,14 @@ namespace Login
                 string label = textBoxLabelCourse.Text;
                 string description = richTextBoxDescription.Text;
                 int period = (int)numericUpDownHoursNumber.Value;
+                string semes = comboBoxSemester.SelectedItem.ToString();
                 if (course.checkId(id) == true)
                 {
                     MessageBox.Show("ID đã tồn tại", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    if (verify() == true && course.insertCourse(id, label, period, description) == true)
+                    if (verify() == true && course.insertCourse(id, label, period, description, semes) == true)
                     {
                         MessageBox.Show("New Course Added", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -91,6 +92,17 @@ namespace Login
         private void dataGridViewListCourse_DoubleClick(object sender, EventArgs e)
         {
             CourseStudentListForm frm = new CourseStudentListForm();
+            
+
+            try
+            {
+                frm.textBoxCourse.Text = dataGridViewListCourse.CurrentRow.Cells[1].Value.ToString();
+                frm.textBoxSemester.Text = dataGridViewListCourse.CurrentRow.Cells[4].Value.ToString();
+            }
+            catch 
+            {
+                MessageBox.Show("Loi");
+            }
             frm.ShowDialog();
         }
 

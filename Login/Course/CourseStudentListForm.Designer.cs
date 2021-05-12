@@ -34,6 +34,7 @@ namespace Login
             this.buttonPrint = new System.Windows.Forms.Button();
             this.dataGridViewStudentList = new System.Windows.Forms.DataGridView();
             this.labelSemester = new System.Windows.Forms.Label();
+            this.textBoxSemester = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,11 +72,11 @@ namespace Login
             // dataGridViewStudentList
             // 
             this.dataGridViewStudentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStudentList.Location = new System.Drawing.Point(44, 113);
+            this.dataGridViewStudentList.Location = new System.Drawing.Point(38, 113);
             this.dataGridViewStudentList.Name = "dataGridViewStudentList";
             this.dataGridViewStudentList.RowHeadersWidth = 51;
             this.dataGridViewStudentList.RowTemplate.Height = 24;
-            this.dataGridViewStudentList.Size = new System.Drawing.Size(719, 282);
+            this.dataGridViewStudentList.Size = new System.Drawing.Size(737, 282);
             this.dataGridViewStudentList.TabIndex = 3;
             // 
             // labelSemester
@@ -88,12 +89,21 @@ namespace Login
             this.labelSemester.TabIndex = 4;
             this.labelSemester.Text = "Semester:";
             // 
+            // textBoxSemester
+            // 
+            this.textBoxSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSemester.Location = new System.Drawing.Point(612, 57);
+            this.textBoxSemester.Name = "textBoxSemester";
+            this.textBoxSemester.Size = new System.Drawing.Size(151, 30);
+            this.textBoxSemester.TabIndex = 5;
+            // 
             // CourseStudentListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxSemester);
             this.Controls.Add(this.labelSemester);
             this.Controls.Add(this.dataGridViewStudentList);
             this.Controls.Add(this.buttonPrint);
@@ -101,6 +111,7 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Name = "CourseStudentListForm";
             this.Text = "CourseStudentListForm";
+            this.Load += new System.EventHandler(this.CourseStudentListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,9 +121,10 @@ namespace Login
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxCourse;
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.DataGridView dataGridViewStudentList;
-        private System.Windows.Forms.Label labelSemester;
+        public System.Windows.Forms.TextBox textBoxCourse;
+        public System.Windows.Forms.Label labelSemester;
+        public System.Windows.Forms.TextBox textBoxSemester;
     }
 }

@@ -47,6 +47,8 @@ namespace Login
             this.labelTotal = new System.Windows.Forms.Label();
             this.numericUpDownHoursNumber = new System.Windows.Forms.NumericUpDown();
             this.textBoxLabelCourse = new System.Windows.Forms.TextBox();
+            this.comboBoxSemester = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListCourse)).BeginInit();
             this.panelTotal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHoursNumber)).BeginInit();
@@ -113,14 +115,14 @@ namespace Login
             // 
             this.textBoxIdCourse.Location = new System.Drawing.Point(143, 37);
             this.textBoxIdCourse.Name = "textBoxIdCourse";
-            this.textBoxIdCourse.Size = new System.Drawing.Size(204, 22);
+            this.textBoxIdCourse.Size = new System.Drawing.Size(287, 22);
             this.textBoxIdCourse.TabIndex = 5;
             // 
             // richTextBoxDescription
             // 
             this.richTextBoxDescription.Location = new System.Drawing.Point(143, 217);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
-            this.richTextBoxDescription.Size = new System.Drawing.Size(204, 96);
+            this.richTextBoxDescription.Size = new System.Drawing.Size(287, 96);
             this.richTextBoxDescription.TabIndex = 8;
             this.richTextBoxDescription.Text = "";
             // 
@@ -238,15 +240,37 @@ namespace Login
             // 
             this.numericUpDownHoursNumber.Location = new System.Drawing.Point(143, 156);
             this.numericUpDownHoursNumber.Name = "numericUpDownHoursNumber";
-            this.numericUpDownHoursNumber.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDownHoursNumber.Size = new System.Drawing.Size(79, 22);
             this.numericUpDownHoursNumber.TabIndex = 7;
             // 
             // textBoxLabelCourse
             // 
             this.textBoxLabelCourse.Location = new System.Drawing.Point(143, 94);
             this.textBoxLabelCourse.Name = "textBoxLabelCourse";
-            this.textBoxLabelCourse.Size = new System.Drawing.Size(204, 22);
+            this.textBoxLabelCourse.Size = new System.Drawing.Size(287, 22);
             this.textBoxLabelCourse.TabIndex = 6;
+            // 
+            // comboBoxSemester
+            // 
+            this.comboBoxSemester.FormattingEnabled = true;
+            this.comboBoxSemester.Items.AddRange(new object[] {
+            "HKI",
+            "HKII"});
+            this.comboBoxSemester.Location = new System.Drawing.Point(338, 154);
+            this.comboBoxSemester.Name = "comboBoxSemester";
+            this.comboBoxSemester.Size = new System.Drawing.Size(92, 24);
+            this.comboBoxSemester.TabIndex = 46;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(246, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 18);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Semester:";
             // 
             // ManageCourseForm
             // 
@@ -254,6 +278,8 @@ namespace Login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1133, 450);
+            this.Controls.Add(this.comboBoxSemester);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panelTotal);
             this.Controls.Add(this.dataGridViewListCourse);
             this.Controls.Add(this.buttonRemove);
@@ -298,10 +324,12 @@ namespace Login
         private System.Windows.Forms.Button buttonPrevious;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonRemove;
-        private System.Windows.Forms.DataGridView dataGridViewListCourse;
         private System.Windows.Forms.Panel panelTotal;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.NumericUpDown numericUpDownHoursNumber;
         private System.Windows.Forms.TextBox textBoxLabelCourse;
+        public System.Windows.Forms.DataGridView dataGridViewListCourse;
+        private System.Windows.Forms.ComboBox comboBoxSemester;
+        private System.Windows.Forms.Label label5;
     }
 }
