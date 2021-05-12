@@ -37,22 +37,24 @@ namespace Login
             // 
             this.dataGridViewContact.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewContact.Location = new System.Drawing.Point(12, 52);
+            this.dataGridViewContact.Location = new System.Drawing.Point(14, 52);
             this.dataGridViewContact.Name = "dataGridViewContact";
             this.dataGridViewContact.RowHeadersWidth = 51;
             this.dataGridViewContact.RowTemplate.Height = 26;
-            this.dataGridViewContact.Size = new System.Drawing.Size(776, 386);
+            this.dataGridViewContact.Size = new System.Drawing.Size(887, 386);
             this.dataGridViewContact.TabIndex = 0;
+            this.dataGridViewContact.DoubleClick += new System.EventHandler(this.dataGridViewContact_DoubleClick);
             // 
             // SelectContactsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Plum;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 450);
             this.Controls.Add(this.dataGridViewContact);
             this.Name = "SelectContactsForm";
             this.Text = "SelectContactsForm";
+            this.Load += new System.EventHandler(this.SelectContactsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContact)).EndInit();
             this.ResumeLayout(false);
 
@@ -60,6 +62,6 @@ namespace Login
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewContact;
+        public System.Windows.Forms.DataGridView dataGridViewContact;
     }
 }

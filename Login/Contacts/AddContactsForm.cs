@@ -55,6 +55,7 @@ namespace Login
             comboBoxGroup.DataSource = group.getGroupByUserId(Global.GlobalUserID);
             comboBoxGroup.DisplayMember = "Name";
             comboBoxGroup.ValueMember = "Id";
+            comboBoxGroup.SelectedItem = null;
 
             ToolTip toolTip1 = new ToolTip();
 

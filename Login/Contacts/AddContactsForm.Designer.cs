@@ -91,9 +91,9 @@ namespace Login
             // btnUploadImage
             // 
             this.btnUploadImage.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnUploadImage.Location = new System.Drawing.Point(151, 554);
+            this.btnUploadImage.Location = new System.Drawing.Point(150, 554);
             this.btnUploadImage.Name = "btnUploadImage";
-            this.btnUploadImage.Size = new System.Drawing.Size(302, 29);
+            this.btnUploadImage.Size = new System.Drawing.Size(303, 29);
             this.btnUploadImage.TabIndex = 8;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
