@@ -97,6 +97,7 @@ namespace Login
             this.buttonAddGroup.TabIndex = 8;
             this.buttonAddGroup.Text = "Add";
             this.buttonAddGroup.UseVisualStyleBackColor = false;
+            this.buttonAddGroup.Click += new System.EventHandler(this.buttonAddGroup_Click);
             // 
             // textBoxGroupName
             // 
@@ -180,6 +181,7 @@ namespace Login
             this.buttonEditGroup.TabIndex = 9;
             this.buttonEditGroup.Text = "Edit";
             this.buttonEditGroup.UseVisualStyleBackColor = false;
+            this.buttonEditGroup.Click += new System.EventHandler(this.buttonEditGroup_Click);
             // 
             // comboBoxSelectGroupEdit
             // 
@@ -299,8 +301,9 @@ namespace Login
             this.buttonRemoveGroup.Name = "buttonRemoveGroup";
             this.buttonRemoveGroup.Size = new System.Drawing.Size(477, 35);
             this.buttonRemoveGroup.TabIndex = 9;
-            this.buttonRemoveGroup.Text = "Reomve";
+            this.buttonRemoveGroup.Text = "Remove";
             this.buttonRemoveGroup.UseVisualStyleBackColor = false;
+            this.buttonRemoveGroup.Click += new System.EventHandler(this.buttonRemoveGroup_Click);
             // 
             // comboBoxSelectGroupRemove
             // 
@@ -398,6 +401,7 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Name = "ContactForm";
             this.Text = "ContactForm";
+            this.Load += new System.EventHandler(this.ContactForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

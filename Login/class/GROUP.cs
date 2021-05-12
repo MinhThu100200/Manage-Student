@@ -94,6 +94,18 @@ namespace Login
             return tb;
         }
 
+        //get group
+        
+        public DataTable getGroups()
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM Groups WHERE", db.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable tb = new DataTable();
+
+            adapter.Fill(tb);
+            return tb;
+        }
+
         //check exist group
         public bool checkGroup(string name, string operation, int id = 0,  int user_id = 0)
         {

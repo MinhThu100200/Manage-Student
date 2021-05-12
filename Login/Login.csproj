@@ -50,10 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutMeForm.cs">
+    <Compile Include="Main\AboutMeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutMeForm.Designer.cs">
+    <Compile Include="Main\AboutMeForm.Designer.cs">
       <DependentUpon>AboutMeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="class\CONTACT.cs" />
@@ -76,16 +76,16 @@
       <DependentUpon>EditContactsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="class\GROUP.cs" />
-    <Compile Include="EditUserForm.cs">
+    <Compile Include="User\EditUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditUserForm.Designer.cs">
+    <Compile Include="User\EditUserForm.Designer.cs">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewUserForm.cs">
+    <Compile Include="User\NewUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewUserForm.Designer.cs">
+    <Compile Include="User\NewUserForm.Designer.cs">
       <DependentUpon>NewUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Score\AddScoreForm.cs">
@@ -94,10 +94,10 @@
     <Compile Include="Score\AddScoreForm.Designer.cs">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AvgResultByScoreForm.cs">
+    <Compile Include="Result\AvgResultByScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AvgResultByScoreForm.Designer.cs">
+    <Compile Include="Result\AvgResultByScoreForm.Designer.cs">
       <DependentUpon>AvgResultByScoreForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Score\AvgScoreForm.cs">
@@ -106,10 +106,10 @@
     <Compile Include="Score\AvgScoreForm.Designer.cs">
       <DependentUpon>AvgScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChartResultForm.cs">
+    <Compile Include="Result\ChartResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChartResultForm.Designer.cs">
+    <Compile Include="Result\ChartResultForm.Designer.cs">
       <DependentUpon>ChartResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="class\COURSE.cs" />
@@ -170,10 +170,10 @@
     <Compile Include="Contacts\ShowFullListContactsForm.Designer.cs">
       <DependentUpon>ShowFullListContactsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaticsResultForm.cs">
+    <Compile Include="Result\StaticsResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaticsResultForm.Designer.cs">
+    <Compile Include="Result\StaticsResultForm.Designer.cs">
       <DependentUpon>StaticsResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Student\ManageStudentsForm.cs">
@@ -201,20 +201,20 @@
     <Compile Include="Student\ListStudent.Designer.cs">
       <DependentUpon>ListStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Main\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Main\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Main\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Main\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="class\MY_DB.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="class\STUDENT.cs" />
     <Compile Include="Student\StaticsForm.cs">
@@ -229,7 +229,7 @@
     <Compile Include="Student\UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutMeForm.resx">
+    <EmbeddedResource Include="Main\AboutMeForm.resx">
       <DependentUpon>AboutMeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\AddContactsForm.resx">
@@ -250,22 +250,22 @@
     <EmbeddedResource Include="Course\AddCourseForm.resx">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditUserForm.resx">
+    <EmbeddedResource Include="User\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewUserForm.resx">
+    <EmbeddedResource Include="User\NewUserForm.resx">
       <DependentUpon>NewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Score\AddScoreForm.resx">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AvgResultByScoreForm.resx">
+    <EmbeddedResource Include="Result\AvgResultByScoreForm.resx">
       <DependentUpon>AvgResultByScoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Score\AvgScoreForm.resx">
       <DependentUpon>AvgScoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartResultForm.resx">
+    <EmbeddedResource Include="Result\ChartResultForm.resx">
       <DependentUpon>ChartResultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Course\EditCourseForm.resx">
@@ -286,7 +286,7 @@
     <EmbeddedResource Include="Score\RemoveScoreForm.resx">
       <DependentUpon>RemoveScoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaticsResultForm.resx">
+    <EmbeddedResource Include="Result\StaticsResultForm.resx">
       <DependentUpon>StaticsResultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\ManageStudentsForm.resx">
@@ -298,10 +298,10 @@
     <EmbeddedResource Include="Student\ListStudent.resx">
       <DependentUpon>ListStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Main\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Main\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\PrintForm.resx">
