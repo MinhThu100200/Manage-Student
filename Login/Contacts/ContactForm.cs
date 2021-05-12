@@ -16,7 +16,7 @@ namespace Login
         {
             InitializeComponent();
         }
-
+        CONTACT contact = new CONTACT();
         private void buttonShowFullList_Click(object sender, EventArgs e)
         {
             ShowFullListContactsForm frm = new ShowFullListContactsForm();
@@ -39,6 +39,12 @@ namespace Login
         {
             SelectContactsForm frm = new SelectContactsForm();
             frm.ShowDialog();
+            try
+            {
+                int contactId = Convert.ToInt32(frm.dataGridViewContact.CurrentRow.Cells[0].Value.ToString());
+                textBoxContactId.Text = contactId.ToString();
+            }
+            catch { }
         }
 
         private void labelEditUser_Click(object sender, EventArgs e)
@@ -52,6 +58,32 @@ namespace Login
             this.Close();
             LoginForm frm = new LoginForm();
             frm.ShowDialog();
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                if (textBoxContactId.Text != "" )
+                {
+                    int idContact = Convert.ToInt32(textBoxContactId.Text);
+                    if(contact.deleteContact(idContact))
+                    {
+                        MessageBox.Show("Success!!!", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }    
+                    else
+                    {
+                        MessageBox.Show("Error", "Delete Contact", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }    
+                }    
+                else
+                {
+                    MessageBox.Show("You must Select contact!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }    
+                
+            }
+            catch { }
         }
     }
 }

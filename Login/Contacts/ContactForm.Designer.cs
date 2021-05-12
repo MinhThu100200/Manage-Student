@@ -250,6 +250,7 @@ namespace Login
             this.buttonRemove.TabIndex = 8;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = false;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // textBoxContactId
             // 
