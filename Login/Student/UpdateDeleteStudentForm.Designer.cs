@@ -51,6 +51,7 @@
             this.buttonFind = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.btnUploadImage = new System.Windows.Forms.Button();
+            this.buttonAddCourse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImageStudent)).BeginInit();
             this.SuspendLayout();
@@ -226,7 +227,7 @@
             // 
             this.buttonRemove.BackColor = System.Drawing.Color.Gold;
             this.buttonRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonRemove.Location = new System.Drawing.Point(772, 337);
+            this.buttonRemove.Location = new System.Drawing.Point(541, 342);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(147, 35);
             this.buttonRemove.TabIndex = 33;
@@ -238,7 +239,7 @@
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.Green;
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonEdit.Location = new System.Drawing.Point(427, 337);
+            this.buttonEdit.Location = new System.Drawing.Point(295, 337);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(147, 35);
             this.buttonEdit.TabIndex = 32;
@@ -290,12 +291,25 @@
             this.btnUploadImage.UseVisualStyleBackColor = true;
             this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
+            // buttonAddCourse
+            // 
+            this.buttonAddCourse.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonAddCourse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAddCourse.Location = new System.Drawing.Point(772, 342);
+            this.buttonAddCourse.Name = "buttonAddCourse";
+            this.buttonAddCourse.Size = new System.Drawing.Size(147, 35);
+            this.buttonAddCourse.TabIndex = 38;
+            this.buttonAddCourse.Text = "Add Course";
+            this.buttonAddCourse.UseVisualStyleBackColor = false;
+            this.buttonAddCourse.Click += new System.EventHandler(this.buttonAddCourse_Click);
+            // 
             // UpdateDeleteStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(947, 389);
+            this.Controls.Add(this.buttonAddCourse);
             this.Controls.Add(this.btnUploadImage);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.buttonFind);
@@ -351,5 +365,6 @@
         private System.Windows.Forms.Button buttonFind;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnUploadImage;
+        private System.Windows.Forms.Button buttonAddCourse;
     }
 }

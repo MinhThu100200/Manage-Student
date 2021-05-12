@@ -58,7 +58,7 @@ namespace Login
             this.buttonSearch = new System.Windows.Forms.Button();
             this.panelTotal = new System.Windows.Forms.Panel();
             this.labelTotal = new System.Windows.Forms.Label();
-            this.buttonSaveIamge = new System.Windows.Forms.Button();
+            this.buttonAddCourse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListStudent)).BeginInit();
@@ -365,18 +365,17 @@ namespace Login
             this.labelTotal.TabIndex = 62;
             this.labelTotal.Text = "Total Students:";
             // 
-            // buttonSaveIamge
+            // buttonAddCourse
             // 
-            this.buttonSaveIamge.BackColor = System.Drawing.Color.DarkGreen;
-            this.buttonSaveIamge.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveIamge.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSaveIamge.Location = new System.Drawing.Point(965, 648);
-            this.buttonSaveIamge.Name = "buttonSaveIamge";
-            this.buttonSaveIamge.Size = new System.Drawing.Size(147, 35);
-            this.buttonSaveIamge.TabIndex = 62;
-            this.buttonSaveIamge.Text = "Save Image";
-            this.buttonSaveIamge.UseVisualStyleBackColor = false;
-            this.buttonSaveIamge.Click += new System.EventHandler(this.buttonSaveIamge_Click);
+            this.buttonAddCourse.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonAddCourse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAddCourse.Location = new System.Drawing.Point(983, 648);
+            this.buttonAddCourse.Name = "buttonAddCourse";
+            this.buttonAddCourse.Size = new System.Drawing.Size(147, 35);
+            this.buttonAddCourse.TabIndex = 63;
+            this.buttonAddCourse.Text = "Add Course";
+            this.buttonAddCourse.UseVisualStyleBackColor = false;
+            this.buttonAddCourse.Click += new System.EventHandler(this.buttonAddCourse_Click);
             // 
             // ManageStudentsForm
             // 
@@ -384,7 +383,7 @@ namespace Login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1649, 716);
-            this.Controls.Add(this.buttonSaveIamge);
+            this.Controls.Add(this.buttonAddCourse);
             this.Controls.Add(this.panelTotal);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonReset);
@@ -455,6 +454,6 @@ namespace Login
         private System.Windows.Forms.Panel panelTotal;
         private System.Windows.Forms.Label labelTotal;
         public System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Button buttonSaveIamge;
+        private System.Windows.Forms.Button buttonAddCourse;
     }
 }

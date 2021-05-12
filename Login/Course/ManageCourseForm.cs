@@ -20,12 +20,6 @@ namespace Login
         SCORE score = new SCORE();
         STUDENT student = new STUDENT();
         COURSE course = new COURSE();
-       
-
-        private void ManageCourseForm_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
@@ -72,12 +66,7 @@ namespace Login
             {
                 return true;
             }
-        }
-
-        private void ManageCourseForm_Load_1(object sender, EventArgs e)
-        {
-            reloadData();
-        }
+        }       
         //load data vao datagridview
         void reloadData()
         {
@@ -101,39 +90,8 @@ namespace Login
         }
         private void dataGridViewListCourse_DoubleClick(object sender, EventArgs e)
         {
-            showData(dataGridViewListCourse);
-        }
-
-        private void buttonAdd_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                int id = Convert.ToInt32(textBoxIdCourse.Text);
-                string label = textBoxLabelCourse.Text;
-                string description = richTextBoxDescription.Text;
-                int period = (int)numericUpDownHoursNumber.Value;
-                if (course.checkId(id) == true)
-                {
-                    MessageBox.Show("ID đã tồn tại", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    if (verify() == true && course.insertCourse(id, label, period, description) == true)
-                    {
-                        MessageBox.Show("New Course Added", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                reloadData();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            CourseStudentListForm frm = new CourseStudentListForm();
+            frm.ShowDialog();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -245,6 +203,16 @@ namespace Login
         {
             int countRow = dataGridViewListCourse.Rows.Count;
             dataGridViewListCourse.CurrentCell = dataGridViewListCourse.Rows[countRow - 1].Cells[0];
+            showData(dataGridViewListCourse);
+        }
+
+        private void ManageCourseForm_Load(object sender, EventArgs e)
+        {
+            reloadData();
+        }
+
+        private void dataGridViewListCourse_Click(object sender, EventArgs e)
+        {
             showData(dataGridViewListCourse);
         }
     }

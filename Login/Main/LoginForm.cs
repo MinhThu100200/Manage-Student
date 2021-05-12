@@ -18,21 +18,6 @@ namespace Login
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         //Login
         private void btnSignIn_Click(object sender, EventArgs e)
         {
@@ -49,15 +34,26 @@ namespace Login
 
             if ((dt.Rows.Count > 0))
             {
-                int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
-                Global.SetGlobalUserID(userid);
+                
+                
                 this.DialogResult = DialogResult.OK;
                 //MessageBox.Show("Bắt đầu nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 if (radioButtonHuman.Checked)
                 {
-                    ContactForm frm = new ContactForm();
-                    frm.ShowDialog();
+                    try
+                    {
+                        int userid = Convert.ToInt32(dt.Rows[0][0].ToString());
+                        Global.SetGlobalUserID(userid);
+                        ContactForm frm = new ContactForm();
+                        frm.ShowDialog();
+                    }
+                    catch 
+                    {
+                        MessageBox.Show("You not permmited", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        this.Show();
+                    }
+                    
                 }
                 else if( radioButtonStudent.Checked)
                 {
@@ -128,25 +124,18 @@ namespace Login
 
 
         }
-
-        
-
-        private void txtUsername_Validated(object sender, EventArgs e)
-        {
-           
-        }
-
+        //sign up
         private void labelNewUser_Click(object sender, EventArgs e)
         {
             NewUserForm frm = new NewUserForm();
             frm.ShowDialog();
         }
-
+        //show pass
         private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
         }
-
+        //about me
         private void labelAboutMe_Click(object sender, EventArgs e)
         {
             AboutMeForm frm = new AboutMeForm();

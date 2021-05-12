@@ -48,6 +48,7 @@ namespace Login
             toolTip1.SetToolTip(this.txtAddress, "Address is not blank");
             toolTip1.SetToolTip(this.pictureBoxStudent, "Add your picture");
         }
+        //check input
         bool verify()
         {
             if ((txtFirstName.Text.Trim() == "") ||
@@ -69,7 +70,7 @@ namespace Login
         {
 
         }
-
+        //Add student
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtIdStudent.Text);
@@ -108,7 +109,7 @@ namespace Login
                 }
             }
         }
-
+        //Load Img
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
@@ -118,7 +119,7 @@ namespace Login
                 pictureBoxStudent.Image = Image.FromFile(opf.FileName);
             }
         }
-
+        //Edit student
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             int id;
@@ -172,7 +173,7 @@ namespace Login
                 MessageBox.Show("Empty fields", "Edit student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
+        //Remove student
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             try
@@ -203,7 +204,7 @@ namespace Login
                 MessageBox.Show("Please enter a valid ID", "Delete student", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
+        //Reset
         private void buttonReset_Click(object sender, EventArgs e)
         {
             txtIdStudent.Text = "";
@@ -215,7 +216,7 @@ namespace Login
             radioButtonMale.Checked = true;
             dateTimePickerBirthDate.Value = DateTime.Now.Date;
         }
-
+        //search 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             //Do data vao datagridview
@@ -230,7 +231,7 @@ namespace Login
             labelTotal.Text = ("Total Students: " + dataGridViewListStudent.Rows.Count);
 
         }
-
+        //double click to fill in textbox
         private void dataGridViewListStudent_DoubleClick(object sender, EventArgs e)
         {
             UpdateDeleteStudentForm updateDeletefrm = new UpdateDeleteStudentForm();
@@ -256,45 +257,10 @@ namespace Login
           
         }
 
-        private void buttonSaveIamge_Click(object sender, EventArgs e)
+        private void buttonAddCourse_Click(object sender, EventArgs e)
         {
-            try
-            {
-                byte[] pic;
-                pic = (byte[])dataGridViewListStudent.CurrentRow.Cells[7].Value;
-                MemoryStream picture = new MemoryStream(pic);
-                this.pictureBoxStudent.Image = Image.FromStream(picture);
-                CreateDocument(@"D:\hk6\MyWordDoc.docx", this.pictureBoxStudent.Image);
-            }
-            catch
-            {           
-                MessageBox.Show("You must choose the student to save student's image", "Save Iamge", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-        public void CreateDocument(string docFilePath, Image image)
-        {
-            _Application oWord = new Microsoft.Office.Interop.Word.Application();
-            //Nếu tạo một Document
-            _Document oDoc = oWord.Documents.Add();
-            //Nếu mở một Document
-            //Microsoft.Office.Interop.Word._Document oDoc = oWord.Documents.Open(docFilePath, ReadOnly: false, Visible: true);
-
-            //Để xem điều gì đang xảy ra trong khi điền tập tài liệu từ Visible = true
-            oWord.Visible = true;
-
-            //Chèn ảnh từ mảng byte vào MS Word, sử dụng Clipboard để dán Image vào tài liệu
-            Object oMissing = System.Reflection.Missing.Value;
-            Clipboard.SetDataObject(image);
-            var oPara = oDoc.Content.Paragraphs.Add(ref oMissing);
-            oPara.Range.Paste();
-            oPara.Range.InsertParagraphAfter();
-
-            //Nếu tạo document
-            oDoc.SaveAs(docFilePath);
-            //Nếu mở một document
-            //oDoc.Save();
-            oDoc.Close();
-            oWord.Quit();
+            AddCourseStudentForm frm = new AddCourseStudentForm();
+            frm.ShowDialog();
         }
     }
 }

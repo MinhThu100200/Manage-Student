@@ -185,5 +185,10 @@ namespace Login
             }
         }
 
+        private void buttonAddCourse_Click(object sender, EventArgs e)
+        {
+            AddCourseStudentForm frm = new AddCourseStudentForm();
+            frm.ShowDialog();
+        }
     }
 }

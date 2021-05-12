@@ -38,12 +38,14 @@ namespace Login
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxSemester = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPeriod)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDownPeriod
             // 
-            this.numericUpDownPeriod.Location = new System.Drawing.Point(166, 116);
+            this.numericUpDownPeriod.Location = new System.Drawing.Point(141, 116);
             this.numericUpDownPeriod.Name = "numericUpDownPeriod";
             this.numericUpDownPeriod.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownPeriod.TabIndex = 42;
@@ -62,7 +64,7 @@ namespace Login
             // 
             // richTextBoxDescription
             // 
-            this.richTextBoxDescription.Location = new System.Drawing.Point(166, 174);
+            this.richTextBoxDescription.Location = new System.Drawing.Point(141, 174);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
             this.richTextBoxDescription.Size = new System.Drawing.Size(302, 96);
             this.richTextBoxDescription.TabIndex = 40;
@@ -81,16 +83,16 @@ namespace Login
             // 
             // txtLabel
             // 
-            this.txtLabel.Location = new System.Drawing.Point(166, 69);
+            this.txtLabel.Location = new System.Drawing.Point(141, 69);
             this.txtLabel.Name = "txtLabel";
-            this.txtLabel.Size = new System.Drawing.Size(302, 22);
+            this.txtLabel.Size = new System.Drawing.Size(310, 22);
             this.txtLabel.TabIndex = 38;
             // 
             // txtIdCourse
             // 
-            this.txtIdCourse.Location = new System.Drawing.Point(166, 28);
+            this.txtIdCourse.Location = new System.Drawing.Point(141, 28);
             this.txtIdCourse.Name = "txtIdCourse";
-            this.txtIdCourse.Size = new System.Drawing.Size(302, 22);
+            this.txtIdCourse.Size = new System.Drawing.Size(120, 22);
             this.txtIdCourse.TabIndex = 37;
             // 
             // label3
@@ -126,12 +128,33 @@ namespace Login
             this.label1.TabIndex = 34;
             this.label1.Text = "Course ID";
             // 
+            // comboBoxSemester
+            // 
+            this.comboBoxSemester.FormattingEnabled = true;
+            this.comboBoxSemester.Location = new System.Drawing.Point(359, 24);
+            this.comboBoxSemester.Name = "comboBoxSemester";
+            this.comboBoxSemester.Size = new System.Drawing.Size(92, 24);
+            this.comboBoxSemester.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(267, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 18);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Semester:";
+            // 
             // AddCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(506, 367);
+            this.Controls.Add(this.comboBoxSemester);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDownPeriod);
             this.Controls.Add(this.buttonAddCourse);
             this.Controls.Add(this.richTextBoxDescription);
@@ -160,5 +183,7 @@ namespace Login
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxSemester;
+        private System.Windows.Forms.Label label4;
     }
 }

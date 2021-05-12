@@ -148,7 +148,7 @@ namespace Login
             this.buttonAdd.TabIndex = 10;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click_1);
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonLast
             // 
@@ -211,6 +211,7 @@ namespace Login
             this.dataGridViewListCourse.RowTemplate.Height = 24;
             this.dataGridViewListCourse.Size = new System.Drawing.Size(605, 369);
             this.dataGridViewListCourse.TabIndex = 15;
+            this.dataGridViewListCourse.Click += new System.EventHandler(this.dataGridViewListCourse_Click);
             this.dataGridViewListCourse.DoubleClick += new System.EventHandler(this.dataGridViewListCourse_DoubleClick);
             // 
             // panelTotal
@@ -272,7 +273,7 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Name = "ManageCourseForm";
             this.Text = "ManageCourseForm";
-            this.Load += new System.EventHandler(this.ManageCourseForm_Load_1);
+            this.Load += new System.EventHandler(this.ManageCourseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListCourse)).EndInit();
             this.panelTotal.ResumeLayout(false);
             this.panelTotal.PerformLayout();

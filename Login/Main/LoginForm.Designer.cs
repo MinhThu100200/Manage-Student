@@ -57,7 +57,6 @@
             this.label1.Size = new System.Drawing.Size(383, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login To Your Account";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -76,7 +75,6 @@
             this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // labelForgotPassword
             // 
@@ -95,7 +93,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(324, 22);
             this.txtUsername.TabIndex = 5;
-            this.txtUsername.Validated += new System.EventHandler(this.txtUsername_Validated);
             // 
             // txtPassword
             // 
@@ -104,7 +101,6 @@
             this.txtPassword.Size = new System.Drawing.Size(324, 22);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // btnSignIn
             // 
