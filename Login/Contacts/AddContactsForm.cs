@@ -51,11 +51,17 @@ namespace Login
         {
             GROUP group = new GROUP();
 
+            CONTACT contact = new CONTACT();
 
             comboBoxGroup.DataSource = group.getGroupByUserId(Global.GlobalUserID);
             comboBoxGroup.DisplayMember = "Name";
             comboBoxGroup.ValueMember = "Id";
             comboBoxGroup.SelectedItem = null;
+
+            comboBoxCourse.DataSource = contact.getCoursetByContact();
+            comboBoxCourse.DisplayMember = "Label";
+            comboBoxCourse.ValueMember = "Id";
+            comboBoxCourse.SelectedItem = null;
 
             ToolTip toolTip1 = new ToolTip();
 
@@ -93,12 +99,13 @@ namespace Login
             try
             {
                 int group_id = (int)comboBoxGroup.SelectedValue;
+                int course_id = (int)comboBoxCourse.SelectedValue;
                 MemoryStream pic = new MemoryStream();
                 pictureBoxImg.Image.Save(pic, pictureBoxImg.Image.RawFormat);
 
                 if ((verify() == true) && contact.checkContact(id, "add") == false)
                 {
-                    if (contact.insertContact(id, fname, lname, group_id, email, phone, addr, pic, user_id))
+                    if (contact.insertContact(id, fname, lname, group_id, email, phone, addr, pic, user_id, course_id))
                     {
                         MessageBox.Show("New Contact Added", "Add Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

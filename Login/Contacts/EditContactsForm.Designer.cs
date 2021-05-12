@@ -49,6 +49,8 @@ namespace Login
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSelectContact = new System.Windows.Forms.Button();
             this.comboBoxGroup = new System.Windows.Forms.ComboBox();
+            this.comboBoxCourse = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@ namespace Login
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(149, 203);
+            this.textBoxEmail.Location = new System.Drawing.Point(149, 239);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(302, 22);
             this.textBoxEmail.TabIndex = 81;
@@ -75,7 +77,7 @@ namespace Login
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(24, 206);
+            this.label4.Location = new System.Drawing.Point(24, 242);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 17);
             this.label4.TabIndex = 80;
@@ -83,7 +85,7 @@ namespace Login
             // 
             // richTextBoxAddress
             // 
-            this.richTextBoxAddress.Location = new System.Drawing.Point(150, 290);
+            this.richTextBoxAddress.Location = new System.Drawing.Point(150, 326);
             this.richTextBoxAddress.Name = "richTextBoxAddress";
             this.richTextBoxAddress.Size = new System.Drawing.Size(301, 84);
             this.richTextBoxAddress.TabIndex = 78;
@@ -92,7 +94,7 @@ namespace Login
             // btnUploadImage
             // 
             this.btnUploadImage.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnUploadImage.Location = new System.Drawing.Point(149, 558);
+            this.btnUploadImage.Location = new System.Drawing.Point(149, 594);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(303, 29);
             this.btnUploadImage.TabIndex = 77;
@@ -103,7 +105,7 @@ namespace Login
             // pictureBoxImg
             // 
             this.pictureBoxImg.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBoxImg.Location = new System.Drawing.Point(150, 394);
+            this.pictureBoxImg.Location = new System.Drawing.Point(150, 430);
             this.pictureBoxImg.Name = "pictureBoxImg";
             this.pictureBoxImg.Size = new System.Drawing.Size(302, 164);
             this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +116,7 @@ namespace Login
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonEdit.Location = new System.Drawing.Point(304, 619);
+            this.buttonEdit.Location = new System.Drawing.Point(304, 655);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(147, 35);
             this.buttonEdit.TabIndex = 75;
@@ -126,7 +128,7 @@ namespace Login
             // 
             this.buttonCancel.BackColor = System.Drawing.Color.LightCoral;
             this.buttonCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonCancel.Location = new System.Drawing.Point(27, 619);
+            this.buttonCancel.Location = new System.Drawing.Point(27, 655);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(147, 35);
             this.buttonCancel.TabIndex = 74;
@@ -139,7 +141,7 @@ namespace Login
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(24, 247);
+            this.label8.Location = new System.Drawing.Point(24, 283);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 17);
             this.label8.TabIndex = 73;
@@ -161,7 +163,7 @@ namespace Login
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(149, 247);
+            this.txtPhone.Location = new System.Drawing.Point(149, 283);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(302, 22);
             this.txtPhone.TabIndex = 70;
@@ -178,7 +180,7 @@ namespace Login
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(25, 444);
+            this.label7.Location = new System.Drawing.Point(25, 480);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 17);
             this.label7.TabIndex = 68;
@@ -189,7 +191,7 @@ namespace Login
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(24, 293);
+            this.label6.Location = new System.Drawing.Point(24, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 17);
             this.label6.TabIndex = 67;
@@ -248,12 +250,33 @@ namespace Login
             this.comboBoxGroup.Size = new System.Drawing.Size(301, 24);
             this.comboBoxGroup.TabIndex = 86;
             // 
+            // comboBoxCourse
+            // 
+            this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Location = new System.Drawing.Point(149, 197);
+            this.comboBoxCourse.Name = "comboBoxCourse";
+            this.comboBoxCourse.Size = new System.Drawing.Size(301, 24);
+            this.comboBoxCourse.TabIndex = 88;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(25, 204);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 17);
+            this.label9.TabIndex = 87;
+            this.label9.Text = "Course";
+            // 
             // EditContactsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Orchid;
-            this.ClientSize = new System.Drawing.Size(505, 655);
+            this.ClientSize = new System.Drawing.Size(505, 690);
+            this.Controls.Add(this.comboBoxCourse);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBoxGroup);
             this.Controls.Add(this.buttonSelectContact);
             this.Controls.Add(this.label5);
@@ -304,5 +327,7 @@ namespace Login
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSelectContact;
         private System.Windows.Forms.ComboBox comboBoxGroup;
+        private System.Windows.Forms.ComboBox comboBoxCourse;
+        private System.Windows.Forms.Label label9;
     }
 }

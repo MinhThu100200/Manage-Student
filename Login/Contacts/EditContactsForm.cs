@@ -64,12 +64,13 @@ namespace Login
             {
                 int id = Convert.ToInt32(txtIdContact.Text);
                 int group_id = (int)comboBoxGroup.SelectedValue;
+                int course_id = (int)comboBoxCourse.SelectedValue;
                 MemoryStream pic = new MemoryStream();
                 pictureBoxImg.Image.Save(pic, pictureBoxImg.Image.RawFormat);
 
                 if ((verify() == true) && contact.checkContact(id, "edit") == false)
                 {
-                    if (contact.updateContact(id, fname, lname, group_id, email, phone, addr, pic))
+                    if (contact.updateContact(id, fname, lname, group_id, email, phone, addr, pic, course_id))
                     {
                         MessageBox.Show("Success!", "Edit Contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -94,11 +95,17 @@ namespace Login
         {
             GROUP group = new GROUP();
 
+            CONTACT contact = new CONTACT();
 
             comboBoxGroup.DataSource = group.getGroupByUserId(Global.GlobalUserID);
             comboBoxGroup.DisplayMember = "Name";
             comboBoxGroup.ValueMember = "Id";
             comboBoxGroup.SelectedItem = null;
+
+            comboBoxCourse.DataSource = contact.getCoursetByContact();
+            comboBoxCourse.DisplayMember = "Label";
+            comboBoxCourse.ValueMember = "Id";
+            comboBoxCourse.SelectedItem = null;
 
         }
 

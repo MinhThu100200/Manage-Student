@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -103,6 +104,22 @@ namespace Login
         private void labelShowAll_Click(object sender, EventArgs e)
         {
             ShowFullListContactsForm_Load(null, null);
+        }
+
+        private void dataGridViewContacts_DoubleClick(object sender, EventArgs e)
+        {
+            ListStudentByContact frm = new ListStudentByContact();
+
+            try
+            {
+                frm.txtContact.Text = dataGridViewContacts.CurrentRow.Cells[1].Value.ToString() + " " + dataGridViewContacts.CurrentRow.Cells[2].Value.ToString();
+                byte[] pic = (byte[])dataGridViewContacts.CurrentRow.Cells[7].Value;
+                MemoryStream picture = new MemoryStream(pic);
+                frm.pictureBoxImg.Image = Image.FromStream(picture);
+                frm.textBoxIdContact.Text = dataGridViewContacts.CurrentRow.Cells[0].Value.ToString();
+            }
+            catch { }
+            frm.ShowDialog();
         }
     }
 }

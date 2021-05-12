@@ -48,6 +48,7 @@ namespace Login
             this.dataGridViewContacts.Size = new System.Drawing.Size(954, 404);
             this.dataGridViewContacts.TabIndex = 0;
             this.dataGridViewContacts.Click += new System.EventHandler(this.dataGridViewContacts_Click);
+            this.dataGridViewContacts.DoubleClick += new System.EventHandler(this.dataGridViewContacts_DoubleClick);
             // 
             // listBoxNameGroup
             // 
@@ -123,12 +124,11 @@ namespace Login
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridViewContacts;
         private System.Windows.Forms.ListBox listBoxNameGroup;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelShowAll;
         private System.Windows.Forms.RichTextBox richTextBoxAddress;
         private System.Windows.Forms.Label label;
+        public System.Windows.Forms.DataGridView dataGridViewContacts;
     }
 }

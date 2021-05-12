@@ -14,17 +14,18 @@ namespace Login
         MY_DB db = new MY_DB();
         
         //insert contact
-        public bool insertContact(int id, string fname, string lname, int group_id, string email, string phone, string addr, MemoryStream img, int user_id)
+        public bool insertContact(int id, string fname, string lname, int group_id, string email, string phone, string addr, MemoryStream img, int user_id, int courseid)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("INSERT INTO Contact (Id, Firstname, Lastname, Group_id, Email, Phone, Address, Picture, User_id ) VALUES (@id, @fname, @lname, @group_id, @email, " +
-                "@phone, @addr, @img, @user_id)", db.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO Contact (Id, Firstname, Lastname, Group_id, Email, Phone, Address, Picture, User_id, Course_id ) VALUES (@id, @fname, @lname, @group_id, @email, " +
+                "@phone, @addr, @img, @user_id, @courseid)", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@fname", SqlDbType.NVarChar).Value = fname;
             command.Parameters.Add("@lname", SqlDbType.NVarChar).Value = lname;
             command.Parameters.Add("@group_id", SqlDbType.Int).Value = group_id;            
             command.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
             command.Parameters.Add("@phone", SqlDbType.NChar).Value = phone;
+            command.Parameters.Add("@courseid", SqlDbType.Int).Value = courseid;
             command.Parameters.Add("@addr", SqlDbType.Text).Value = addr;
             command.Parameters.Add("@img", SqlDbType.Image).Value = img.ToArray();
             command.Parameters.Add("@user_id", SqlDbType.Int).Value = user_id;
@@ -44,17 +45,18 @@ namespace Login
         }
 
         //update contact
-        public bool updateContact(int id, string fname, string lname, int group_id, string email, string phone, string addr, MemoryStream img)
+        public bool updateContact(int id, string fname, string lname, int group_id, string email, string phone, string addr, MemoryStream img, int courseid)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlCommand command = new SqlCommand("UPDATE Contact SET Firstname=@fname, Lastname=@lname, Group_id=@group_id, Email=@email, Phone=@phone, Address=@addr, Picture=@img" +
-                " WHERE Id=@id", db.getConnection);
+                " Course_id = @courseid WHERE Id=@id", db.getConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             command.Parameters.Add("@fname", SqlDbType.NVarChar).Value = fname;
             command.Parameters.Add("@lname", SqlDbType.NVarChar).Value = lname;
             command.Parameters.Add("@group_id", SqlDbType.Int).Value = group_id;
             command.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
             command.Parameters.Add("@phone", SqlDbType.NChar).Value = phone;
+            command.Parameters.Add("@courseid", SqlDbType.Int).Value = courseid;
             command.Parameters.Add("@addr", SqlDbType.Text).Value = addr;
             command.Parameters.Add("@img", SqlDbType.Image).Value = img.ToArray();
             adapter.UpdateCommand = command;
@@ -140,6 +142,16 @@ namespace Login
         {
             
             SqlCommand command = new SqlCommand("SELECT * FROM Contact WHERE Id=" + id, db.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable tb = new DataTable();
+
+            adapter.Fill(tb);
+            return tb;
+        }
+        public DataTable getCoursetByContact()
+        {
+
+            SqlCommand command = new SqlCommand("select co.Id, co.Label from Course as co, Contact as ct where co.Id != ct.Course_id", db.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable tb = new DataTable();
 

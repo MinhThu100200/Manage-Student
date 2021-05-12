@@ -32,18 +32,20 @@ namespace Login
             this.txtContact = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxImg = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewListStudent = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBoxIdContact = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListStudent)).BeginInit();
             this.SuspendLayout();
             // 
             // txtContact
             // 
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContact.Location = new System.Drawing.Point(451, 129);
+            this.txtContact.Location = new System.Drawing.Point(518, 133);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(337, 30);
+            this.txtContact.Size = new System.Drawing.Size(270, 30);
             this.txtContact.TabIndex = 39;
             // 
             // label1
@@ -51,7 +53,7 @@ namespace Login
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(289, 132);
+            this.label1.Location = new System.Drawing.Point(356, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 38;
@@ -67,15 +69,15 @@ namespace Login
             this.pictureBoxImg.TabIndex = 40;
             this.pictureBoxImg.TabStop = false;
             // 
-            // dataGridView1
+            // dataGridViewListStudent
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 185);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(759, 253);
-            this.dataGridView1.TabIndex = 41;
+            this.dataGridViewListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListStudent.Location = new System.Drawing.Point(29, 185);
+            this.dataGridViewListStudent.Name = "dataGridViewListStudent";
+            this.dataGridViewListStudent.RowHeadersWidth = 51;
+            this.dataGridViewListStudent.RowTemplate.Height = 24;
+            this.dataGridViewListStudent.Size = new System.Drawing.Size(759, 253);
+            this.dataGridViewListStudent.TabIndex = 41;
             // 
             // label2
             // 
@@ -88,32 +90,54 @@ namespace Login
             this.label2.TabIndex = 42;
             this.label2.Text = "List Student";
             // 
+            // textBoxIdContact
+            // 
+            this.textBoxIdContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIdContact.Location = new System.Drawing.Point(151, 133);
+            this.textBoxIdContact.Name = "textBoxIdContact";
+            this.textBoxIdContact.Size = new System.Drawing.Size(190, 30);
+            this.textBoxIdContact.TabIndex = 44;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(24, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 25);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Contact ID:";
+            // 
             // ListStudentByContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxIdContact);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewListStudent);
             this.Controls.Add(this.pictureBoxImg);
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.label1);
             this.Name = "ListStudentByContact";
             this.Text = "ListStudentByContact";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListStudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBoxImg;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewListStudent;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtContact;
+        public System.Windows.Forms.PictureBox pictureBoxImg;
+        public System.Windows.Forms.TextBox textBoxIdContact;
+        private System.Windows.Forms.Label label3;
     }
 }
