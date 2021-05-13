@@ -66,7 +66,7 @@ namespace Login
                 dataGridViewContacts.ReadOnly = true;
                 SqlCommand command = new SqlCommand("SELECT Contact.Id, Firstname, Lastname, Groups.Name as 'Group', Phone, " +
                     "Email, Address, Picture FROM Contact INNER JOIN Groups ON Contact.Group_id = Groups.Id WHERE " +
-                    "Contact.User_id = @userid AND Conatct.Group_id = @groupid");
+                    "Contact.User_id = @userid AND Contact.Group_id = @groupid");
                 command.Parameters.Add("@userid", SqlDbType.Int).Value = Global.GlobalUserID;
                 command.Parameters.Add("@groupid", SqlDbType.Int).Value = groupid;
                 DataGridViewImageColumn picCol = new DataGridViewImageColumn();

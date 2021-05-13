@@ -102,7 +102,7 @@ namespace Login
             comboBoxGroup.ValueMember = "Id";
             comboBoxGroup.SelectedItem = null;
 
-            comboBoxCourse.DataSource = contact.getCoursetByContact();
+            comboBoxCourse.DataSource = contact.getCourseByContact();
             comboBoxCourse.DisplayMember = "Label";
             comboBoxCourse.ValueMember = "Id";
             comboBoxCourse.SelectedItem = null;

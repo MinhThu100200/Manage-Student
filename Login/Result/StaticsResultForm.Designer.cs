@@ -158,7 +158,7 @@ namespace Login
             this.labelScoreR.AutoSize = true;
             this.labelScoreR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScoreR.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelScoreR.Location = new System.Drawing.Point(276, 400);
+            this.labelScoreR.Location = new System.Drawing.Point(355, 400);
             this.labelScoreR.Name = "labelScoreR";
             this.labelScoreR.Size = new System.Drawing.Size(28, 20);
             this.labelScoreR.TabIndex = 11;
@@ -169,7 +169,7 @@ namespace Login
             this.labelScoreWinfrom.AutoSize = true;
             this.labelScoreWinfrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScoreWinfrom.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelScoreWinfrom.Location = new System.Drawing.Point(276, 334);
+            this.labelScoreWinfrom.Location = new System.Drawing.Point(355, 334);
             this.labelScoreWinfrom.Name = "labelScoreWinfrom";
             this.labelScoreWinfrom.Size = new System.Drawing.Size(85, 20);
             this.labelScoreWinfrom.TabIndex = 12;

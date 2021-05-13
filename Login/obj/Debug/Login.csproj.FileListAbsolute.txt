@@ -52,4 +52,3 @@ D:\repos\Login\Login\obj\Debug\Login.EditUserForm.resources
 D:\repos\Login\Login\obj\Debug\Login.AddCourseStudentForm.resources
 D:\repos\Login\Login\obj\Debug\Login.CourseStudentListForm.resources
 D:\repos\Login\Login\obj\Debug\Login.ListStudentByContact.resources
-D:\repos\Login\Login\obj\Debug\Login.VerifyEmailForm.resources

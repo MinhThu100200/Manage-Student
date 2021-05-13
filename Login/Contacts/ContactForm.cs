@@ -129,9 +129,9 @@ namespace Login
                 int id = dt.Rows.Count;
                 string name = textBoxGroupName.Text;
                 int userid = Global.GlobalUserID;
-                if (group.checkGroup(name, "add", id + 1, userid))
+                if (!group.checkGroup(name, "add", id + 1, userid))
                 {
-                    if (group.insertGroup(id + 1, name, userid))
+                    if (group.insertGroup(8, name, userid))
                     {
                         MessageBox.Show("Success!!!", "Add Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -158,7 +158,7 @@ namespace Login
 
                 int id = (int)comboBoxSelectGroupEdit.SelectedValue;
                 string name = textBoxNewNameGroup.Text;
-                if(group.checkGroup(name, "edit", id))
+                if(!group.checkGroup(name, "edit", id))
                 {
                     if (group.updateGroup(id, name))
                     {
@@ -166,7 +166,7 @@ namespace Login
                     }
                     else
                     {
-                        MessageBox.Show("Error", "Add Group", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error", "Edit Group", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }    
                 else

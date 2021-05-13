@@ -149,10 +149,11 @@ namespace Login
             return tb;
         }
         //get course avai contact can teach
-        public DataTable getCoursetByContact()
+        public DataTable getCourseByContact()
         {
 
-            SqlCommand command = new SqlCommand("select co.Id, co.Label from Course as co, Contact as ct where co.Id != ct.Course_id", db.getConnection);
+            SqlCommand command = new SqlCommand("select co.Id, co.Label from Course as co except select ct.Course_id, co.Label from Course as co, Contact as ct " +
+                "where co.Id = ct.Course_id", db.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable tb = new DataTable();
 
