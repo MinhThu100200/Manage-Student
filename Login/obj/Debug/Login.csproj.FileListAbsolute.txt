@@ -40,7 +40,6 @@ D:\repos\Login\Login\obj\Debug\Login.PrintCourseForm.resources
 D:\repos\Login\Login\obj\Debug\Login.RemoveScoreForm.resources
 D:\repos\Login\Login\obj\Debug\Login.AvgScoreForm.resources
 D:\repos\Login\Login\obj\Debug\Login.AvgResultByScoreForm.resources
-D:\repos\Login\Login\obj\Debug\Login.ChartResultForm.resources
 D:\repos\Login\Login\obj\Debug\Login.StaticsResultForm.resources
 D:\repos\Login\Login\obj\Debug\Login.AddContactsForm.resources
 D:\repos\Login\Login\obj\Debug\Login.ContactForm.resources
@@ -53,3 +52,4 @@ D:\repos\Login\Login\obj\Debug\Login.EditUserForm.resources
 D:\repos\Login\Login\obj\Debug\Login.AddCourseStudentForm.resources
 D:\repos\Login\Login\obj\Debug\Login.CourseStudentListForm.resources
 D:\repos\Login\Login\obj\Debug\Login.ListStudentByContact.resources
+D:\repos\Login\Login\obj\Debug\Login.VerifyEmailForm.resources

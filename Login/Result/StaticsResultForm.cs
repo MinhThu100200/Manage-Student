@@ -20,11 +20,7 @@ namespace Login
         SCORE score = new SCORE();
         RESULT result = new RESULT();
         STUDENT student = new STUDENT();
-        private void buttonDrawChart_Click(object sender, EventArgs e)
-        {
-            ChartResultForm frm = new ChartResultForm();
-            frm.ShowDialog();
-        }
+        
 
         private void StaticsResultForm_Load(object sender, EventArgs e)
         {
