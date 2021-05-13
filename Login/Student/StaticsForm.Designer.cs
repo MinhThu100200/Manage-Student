@@ -29,15 +29,21 @@ namespace Login
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panelTotal = new System.Windows.Forms.Panel();
             this.labelTotal = new System.Windows.Forms.Label();
             this.panelMale = new System.Windows.Forms.Panel();
             this.labelMale = new System.Windows.Forms.Label();
             this.panelFemale = new System.Windows.Forms.Panel();
             this.labelFemale = new System.Windows.Forms.Label();
+            this.chartGender = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelTotal.SuspendLayout();
             this.panelMale.SuspendLayout();
             this.panelFemale.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGender)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTotal
@@ -100,11 +106,32 @@ namespace Login
             this.labelFemale.MouseEnter += new System.EventHandler(this.labelFemale_MouseEnter);
             this.labelFemale.MouseLeave += new System.EventHandler(this.labelFemale_MouseLeave);
             // 
+            // chartGender
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartGender.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGender.Legends.Add(legend1);
+            this.chartGender.Location = new System.Drawing.Point(1, 225);
+            this.chartGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartGender.Name = "chartGender";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartGender.Series.Add(series1);
+            this.chartGender.Size = new System.Drawing.Size(498, 194);
+            this.chartGender.TabIndex = 3;
+            this.chartGender.Text = "chartGender";
+            title1.Name = "Chart Score";
+            title1.Text = "Chart Score";
+            this.chartGender.Titles.Add(title1);
+            // 
             // StaticsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 220);
+            this.ClientSize = new System.Drawing.Size(500, 424);
+            this.Controls.Add(this.chartGender);
             this.Controls.Add(this.panelFemale);
             this.Controls.Add(this.panelMale);
             this.Controls.Add(this.panelTotal);
@@ -114,6 +141,7 @@ namespace Login
             this.panelTotal.ResumeLayout(false);
             this.panelMale.ResumeLayout(false);
             this.panelFemale.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartGender)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,5 +154,6 @@ namespace Login
         private System.Windows.Forms.Panel panelFemale;
         private System.Windows.Forms.Label labelMale;
         private System.Windows.Forms.Label labelFemale;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartGender;
     }
 }

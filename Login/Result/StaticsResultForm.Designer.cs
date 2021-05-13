@@ -37,7 +37,6 @@ namespace Login
             this.labelScoreC = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.labelFail = new System.Windows.Forms.Label();
-            this.buttonDrawChart = new System.Windows.Forms.Button();
             this.labelScorePython = new System.Windows.Forms.Label();
             this.labelScoreSQL = new System.Windows.Forms.Label();
             this.labelScoreR = new System.Windows.Forms.Label();
@@ -132,20 +131,6 @@ namespace Login
             this.labelFail.TabIndex = 7;
             this.labelFail.Text = "Fail:";
             // 
-            // buttonDrawChart
-            // 
-            this.buttonDrawChart.BackColor = System.Drawing.Color.ForestGreen;
-            this.buttonDrawChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDrawChart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonDrawChart.Location = new System.Drawing.Point(512, 272);
-            this.buttonDrawChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonDrawChart.Name = "buttonDrawChart";
-            this.buttonDrawChart.Size = new System.Drawing.Size(129, 31);
-            this.buttonDrawChart.TabIndex = 8;
-            this.buttonDrawChart.Text = "Draw chart";
-            this.buttonDrawChart.UseVisualStyleBackColor = false;
-            this.buttonDrawChart.Click += new System.EventHandler(this.buttonDrawChart_Click);
-            // 
             // labelScorePython
             // 
             this.labelScorePython.AutoSize = true;
@@ -200,7 +185,6 @@ namespace Login
             this.Controls.Add(this.labelScoreR);
             this.Controls.Add(this.labelScoreSQL);
             this.Controls.Add(this.labelScorePython);
-            this.Controls.Add(this.buttonDrawChart);
             this.Controls.Add(this.labelFail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.labelScoreC);
@@ -228,7 +212,6 @@ namespace Login
         private System.Windows.Forms.Label labelScoreC;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labelFail;
-        private System.Windows.Forms.Button buttonDrawChart;
         private System.Windows.Forms.Label labelScorePython;
         private System.Windows.Forms.Label labelScoreSQL;
         private System.Windows.Forms.Label labelScoreR;

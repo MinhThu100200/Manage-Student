@@ -124,12 +124,6 @@
     <Compile Include="Score\AvgScoreForm.Designer.cs">
       <DependentUpon>AvgScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Result\ChartResultForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Result\ChartResultForm.Designer.cs">
-      <DependentUpon>ChartResultForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="class\COURSE.cs" />
     <Compile Include="Contacts\ContactForm.cs">
       <SubType>Form</SubType>
@@ -291,9 +285,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Score\AvgScoreForm.resx">
       <DependentUpon>AvgScoreForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Result\ChartResultForm.resx">
-      <DependentUpon>ChartResultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Course\EditCourseForm.resx">
       <DependentUpon>EditCourseForm.cs</DependentUpon>

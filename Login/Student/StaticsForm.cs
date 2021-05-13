@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Login
 {
@@ -87,7 +88,38 @@ namespace Login
             labelTotal.Text = ("Total Students: " + total.ToString());
             labelMale.Text = ("Male: " + (maleStudentsPercentage.ToString("0.00") + "% "));
             labelFemale.Text = ("Female: " + (femaleStudentPercentage.ToString("0.00") + "% "));
-           
+
+            chartGender.Series.Clear();
+            chartGender.Legends.Clear();
+
+            //Add a new Legend(if needed) and do some formating
+            chartGender.Legends.Add("M");
+            chartGender.Legends[0].LegendStyle = LegendStyle.Table;
+            chartGender.Legends[0].Docking = Docking.Bottom;
+            chartGender.Legends[0].Alignment = StringAlignment.Center;
+            chartGender.Legends[0].Title = "Gender Statistics";
+            chartGender.Legends[0].BorderColor = Color.Black;
+
+            //Add a new chart-series
+
+            string male = "Male";
+            chartGender.Series.Add(male);
+            string female = "Female";
+            chartGender.Series.Add(female);
+            //set the chart-type to "Pie"
+            chartGender.Series[male].ChartType = SeriesChartType.Column;
+
+            chartGender.Series[female].ChartType = SeriesChartType.Column;
+
+            //            MessageBox.Show(StudentDAO.Instance.countStudent().ToString());
+            //Add some datapoints so the series. in this case you can pass the values to this method
+
+            chartGender.Series[female].Points.AddXY("", student.totalStudentMale());
+            chartGender.Series[male].Points.AddXY("", student.totalStudentFemale());
+
+            //  c2.Series[female].Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //  c2.Series[female].LabelForeColor = System.Drawing.Color.White;
+
         }
     }
 }
