@@ -44,23 +44,24 @@ namespace Login
             this.buttonChartByCourse.BackColor = System.Drawing.Color.LightSeaGreen;
             this.buttonChartByCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChartByCourse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonChartByCourse.Location = new System.Drawing.Point(22, 10);
-            this.buttonChartByCourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChartByCourse.Location = new System.Drawing.Point(29, 12);
+            this.buttonChartByCourse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonChartByCourse.Name = "buttonChartByCourse";
-            this.buttonChartByCourse.Size = new System.Drawing.Size(171, 32);
+            this.buttonChartByCourse.Size = new System.Drawing.Size(228, 39);
             this.buttonChartByCourse.TabIndex = 0;
             this.buttonChartByCourse.Text = "Chart By Course";
             this.buttonChartByCourse.UseVisualStyleBackColor = false;
+            this.buttonChartByCourse.Click += new System.EventHandler(this.buttonChartByCourse_Click);
             // 
             // buttonChartByResult
             // 
             this.buttonChartByResult.BackColor = System.Drawing.Color.LightSeaGreen;
             this.buttonChartByResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChartByResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonChartByResult.Location = new System.Drawing.Point(381, 10);
-            this.buttonChartByResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChartByResult.Location = new System.Drawing.Point(508, 12);
+            this.buttonChartByResult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonChartByResult.Name = "buttonChartByResult";
-            this.buttonChartByResult.Size = new System.Drawing.Size(162, 32);
+            this.buttonChartByResult.Size = new System.Drawing.Size(216, 39);
             this.buttonChartByResult.TabIndex = 1;
             this.buttonChartByResult.Text = "Chart By Result";
             this.buttonChartByResult.UseVisualStyleBackColor = false;
@@ -71,14 +72,14 @@ namespace Login
             this.chartScore.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartScore.Legends.Add(legend1);
-            this.chartScore.Location = new System.Drawing.Point(22, 47);
-            this.chartScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartScore.Location = new System.Drawing.Point(29, 58);
+            this.chartScore.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartScore.Name = "chartScore";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartScore.Series.Add(series1);
-            this.chartScore.Size = new System.Drawing.Size(520, 315);
+            this.chartScore.Size = new System.Drawing.Size(693, 388);
             this.chartScore.TabIndex = 2;
             this.chartScore.Text = "chartScore";
             title1.Name = "Chart Score";
@@ -87,14 +88,14 @@ namespace Login
             // 
             // ChartResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(562, 372);
+            this.ClientSize = new System.Drawing.Size(749, 458);
             this.Controls.Add(this.chartScore);
             this.Controls.Add(this.buttonChartByResult);
             this.Controls.Add(this.buttonChartByCourse);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ChartResultForm";
             this.Text = "ChartResultForm";
             ((System.ComponentModel.ISupportInitialize)(this.chartScore)).EndInit();

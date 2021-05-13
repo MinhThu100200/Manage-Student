@@ -16,5 +16,10 @@ namespace Login
         {
             InitializeComponent();
         }
+
+        private void buttonChartByCourse_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

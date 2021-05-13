@@ -36,6 +36,8 @@ namespace Login
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxIdContact = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListStudent)).BeginInit();
             this.SuspendLayout();
@@ -109,12 +111,34 @@ namespace Login
             this.label3.TabIndex = 43;
             this.label3.Text = "Contact ID:";
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(151, 444);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(134, 30);
+            this.buttonSave.TabIndex = 45;
+            this.buttonSave.Text = "Save To Text";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(501, 444);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(134, 30);
+            this.buttonPrint.TabIndex = 46;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
             // ListStudentByContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.buttonPrint);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxIdContact);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -124,6 +148,7 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Name = "ListStudentByContact";
             this.Text = "ListStudentByContact";
+            this.Load += new System.EventHandler(this.ListStudentByContact_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListStudent)).EndInit();
             this.ResumeLayout(false);
@@ -139,5 +164,7 @@ namespace Login
         public System.Windows.Forms.PictureBox pictureBoxImg;
         public System.Windows.Forms.TextBox textBoxIdContact;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }

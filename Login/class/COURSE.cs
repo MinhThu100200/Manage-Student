@@ -137,7 +137,7 @@ namespace Login
             DataTable dt = new DataTable();
             
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("select st.Id, st.Firstname, st.Lastname, st.Birthdate, st.Gender from Student as st, Course as co, Course_Student as cs " +
+            SqlCommand command = new SqlCommand("select st.Id, st.Firstname, st.Lastname, st.Birthdate, st.Gender, st.Phone, st.Address, st. Picture from Student as st, Course as co, Course_Student as cs " +
                 "where co.Label = @name and co.Semester = @semes and co.Id = cs.Course_id and st.Id = cs.Student_id", db.getConnection);
             command.Parameters.Add("@name", SqlDbType.NVarChar).Value = lable;
             command.Parameters.Add("@semes", SqlDbType.NVarChar).Value = semester;

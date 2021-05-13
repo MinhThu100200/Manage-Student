@@ -106,7 +106,7 @@ namespace Login
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(169, 28);
             this.label9.TabIndex = 56;
-            this.label9.Text = "Search By Id, FName";
+            this.label9.Text = "Search By Id:";
             // 
             // textBoxSearch
             // 
@@ -135,7 +135,7 @@ namespace Login
             this.dataGridViewScoreOfCourse.Name = "dataGridViewScoreOfCourse";
             this.dataGridViewScoreOfCourse.RowHeadersWidth = 51;
             this.dataGridViewScoreOfCourse.RowTemplate.Height = 24;
-            this.dataGridViewScoreOfCourse.Size = new System.Drawing.Size(1024, 195);
+            this.dataGridViewScoreOfCourse.Size = new System.Drawing.Size(1024, 331);
             this.dataGridViewScoreOfCourse.TabIndex = 62;
             this.dataGridViewScoreOfCourse.DoubleClick += new System.EventHandler(this.dataGridViewScoreOfCourse_DoubleClick);
             // 
@@ -144,7 +144,7 @@ namespace Login
             this.buttonCancel.BackColor = System.Drawing.Color.Red;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonCancel.Location = new System.Drawing.Point(642, 315);
+            this.buttonCancel.Location = new System.Drawing.Point(1251, 389);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(110, 35);
             this.buttonCancel.TabIndex = 63;
@@ -157,7 +157,7 @@ namespace Login
             this.buttonPrint.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPrint.Location = new System.Drawing.Point(315, 315);
+            this.buttonPrint.Location = new System.Drawing.Point(337, 389);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(110, 35);
             this.buttonPrint.TabIndex = 64;
@@ -170,7 +170,7 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1373, 363);
+            this.ClientSize = new System.Drawing.Size(1373, 436);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.dataGridViewScoreOfCourse);

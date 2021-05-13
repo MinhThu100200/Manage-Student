@@ -37,22 +37,33 @@ namespace Login
                 labelScoreJava.Text = (avgByCourse.Rows[1][0].ToString() + ": " + avgByCourse.Rows[1][1].ToString());
                 labelScoreML.Text = (avgByCourse.Rows[2][0].ToString() + ": " + avgByCourse.Rows[2][1].ToString());
                 labelScoreAI.Text = (avgByCourse.Rows[3][0].ToString() + ": " + avgByCourse.Rows[3][1].ToString());
-                for (int i = 0; i<allStudents.Rows.Count; i++)
-                {
-                    DataTable avgByResult = result.getAvgScoreByStudent(Convert.ToInt32(allStudents.Rows[i][0].ToString()));
-                    if (Convert.ToInt32(avgByResult.Rows[0][0].ToString()) >= 5)
-                    {
-                        dem = dem + 1;
-                    }
-                }
-                labelPass.Text = ("Pass: " + (float)100 * dem / allStudents.Rows.Count);
-                labelFail.Text = ("Fail: " + (float)100 * (allStudents.Rows.Count - dem) / allStudents.Rows.Count);
-                
+                labelScorePython.Text = (avgByCourse.Rows[4][0].ToString() + ": " + avgByCourse.Rows[4][1].ToString());
+                labelScoreSQL.Text = (avgByCourse.Rows[5][0].ToString() + ": " + avgByCourse.Rows[5][1].ToString());
+                labelScoreWinfrom.Text = (avgByCourse.Rows[6][0].ToString() + ": " + avgByCourse.Rows[6][1].ToString());
+                labelScoreR.Text = (avgByCourse.Rows[7][0].ToString() + ": " + avgByCourse.Rows[7][1].ToString());
+
             }
             catch(Exception )
             {
 
             }
+            DataTable avgByResult = new DataTable();
+            avgByResult = result.getAvgScoreByStudent();
+
+            for(int sc = 0; sc <avgByResult.Rows.Count; sc ++)
+            {
+                float avgscore = 0;
+                _ = float.TryParse(avgByResult.Rows[sc][1].ToString(), out avgscore);
+                if ((avgscore) >= 5)
+                {
+                    dem = dem + 1;
+                }
+                Console.WriteLine(sc);
+            }
+            
+            labelPass.Text = ("Pass: " + (float)100 * dem / allStudents.Rows.Count)+"%";
+                labelFail.Text = ("Fail: " + (float)100 * (allStudents.Rows.Count - dem) / allStudents.Rows.Count)+"%";
+                
 
         }
     }

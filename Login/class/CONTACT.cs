@@ -148,6 +148,7 @@ namespace Login
             adapter.Fill(tb);
             return tb;
         }
+        //get course avai contact can teach
         public DataTable getCoursetByContact()
         {
 
@@ -158,7 +159,20 @@ namespace Login
             adapter.Fill(tb);
             return tb;
         }
+        //get student of one contact
 
+        public DataTable getStudentByContact(int courseid)
+        {
+
+            SqlCommand command = new SqlCommand("select st. Id, st.Firstname, st.Lastname, st.Birthdate, st.Gender, st.Phone, st.Address, st.Picture from Student as st, Course_Student as cs, Contact as ct where " +
+                "ct.Id = @id and ct.Course_id = cs.Course_id and st.Id = cs.Student_id", db.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = courseid;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable tb = new DataTable();
+
+            adapter.Fill(tb);
+            return tb;
+        }
 
     }
 }

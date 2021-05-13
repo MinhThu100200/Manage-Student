@@ -35,6 +35,7 @@ namespace Login
             this.dataGridViewStudentList = new System.Windows.Forms.DataGridView();
             this.labelSemester = new System.Windows.Forms.Label();
             this.textBoxSemester = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,12 +63,13 @@ namespace Login
             this.buttonPrint.BackColor = System.Drawing.SystemColors.GrayText;
             this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPrint.Location = new System.Drawing.Point(350, 404);
+            this.buttonPrint.Location = new System.Drawing.Point(597, 404);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(100, 37);
+            this.buttonPrint.Size = new System.Drawing.Size(122, 37);
             this.buttonPrint.TabIndex = 2;
             this.buttonPrint.Text = "Print";
             this.buttonPrint.UseVisualStyleBackColor = false;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // dataGridViewStudentList
             // 
@@ -97,12 +99,26 @@ namespace Login
             this.textBoxSemester.Size = new System.Drawing.Size(151, 30);
             this.textBoxSemester.TabIndex = 5;
             // 
+            // buttonSave
+            // 
+            this.buttonSave.BackColor = System.Drawing.SystemColors.GrayText;
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonSave.Location = new System.Drawing.Point(116, 404);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(142, 37);
+            this.buttonSave.TabIndex = 6;
+            this.buttonSave.Text = "Save To Text";
+            this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // CourseStudentListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxSemester);
             this.Controls.Add(this.labelSemester);
             this.Controls.Add(this.dataGridViewStudentList);
@@ -126,5 +142,6 @@ namespace Login
         public System.Windows.Forms.TextBox textBoxCourse;
         public System.Windows.Forms.Label labelSemester;
         public System.Windows.Forms.TextBox textBoxSemester;
+        private System.Windows.Forms.Button buttonSave;
     }
 }

@@ -25,14 +25,14 @@ namespace Login
 
             //load data contact
             dataGridViewContacts.ReadOnly = true;
-            SqlCommand command = new SqlCommand("SELECT Firstname, Lastname, Groups.Name as 'Group', Phone, " +
+            SqlCommand command = new SqlCommand("SELECT Contact.Id, Firstname, Lastname, Groups.Name as 'Group', Phone, " +
                 "Email, Address, Picture FROM Contact INNER JOIN Groups ON Contact.Group_id = Groups.Id WHERE " +
                 "Contact.User_id = @userid");
             command.Parameters.Add("@userid", SqlDbType.Int).Value = Global.GlobalUserID;
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             dataGridViewContacts.RowTemplate.Height = 80;
             dataGridViewContacts.DataSource = contact.selectContactList(command);          
-            picCol = (DataGridViewImageColumn)dataGridViewContacts.Columns[6];
+            picCol = (DataGridViewImageColumn)dataGridViewContacts.Columns[7];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridViewContacts.AllowUserToAddRows = false;
 
@@ -64,7 +64,7 @@ namespace Login
                 //load data contact
                 int groupid = (int)listBoxNameGroup.SelectedValue;
                 dataGridViewContacts.ReadOnly = true;
-                SqlCommand command = new SqlCommand("SELECT Firstname, Lastname, Groups.Name as 'Group', Phone, " +
+                SqlCommand command = new SqlCommand("SELECT Contact.Id, Firstname, Lastname, Groups.Name as 'Group', Phone, " +
                     "Email, Address, Picture FROM Contact INNER JOIN Groups ON Contact.Group_id = Groups.Id WHERE " +
                     "Contact.User_id = @userid AND Conatct.Group_id = @groupid");
                 command.Parameters.Add("@userid", SqlDbType.Int).Value = Global.GlobalUserID;
@@ -72,7 +72,7 @@ namespace Login
                 DataGridViewImageColumn picCol = new DataGridViewImageColumn();
                 dataGridViewContacts.RowTemplate.Height = 80;
                 dataGridViewContacts.DataSource = contact.selectContactList(command);
-                picCol = (DataGridViewImageColumn)dataGridViewContacts.Columns[6];
+                picCol = (DataGridViewImageColumn)dataGridViewContacts.Columns[7];
                 picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 dataGridViewContacts.AllowUserToAddRows = false;
 
@@ -95,7 +95,7 @@ namespace Login
         {
             try
             {
-                richTextBoxAddress.Text = dataGridViewContacts.CurrentRow.Cells[5].Value.ToString();
+                richTextBoxAddress.Text = dataGridViewContacts.CurrentRow.Cells[6].Value.ToString();
             }
             catch { }
             

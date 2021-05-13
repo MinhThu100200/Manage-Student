@@ -38,6 +38,10 @@ namespace Login
             this.label7 = new System.Windows.Forms.Label();
             this.labelFail = new System.Windows.Forms.Label();
             this.buttonDrawChart = new System.Windows.Forms.Button();
+            this.labelScorePython = new System.Windows.Forms.Label();
+            this.labelScoreSQL = new System.Windows.Forms.Label();
+            this.labelScoreR = new System.Windows.Forms.Label();
+            this.labelScoreWinfrom = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -45,10 +49,9 @@ namespace Login
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(24, 67);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 25);
+            this.label1.Size = new System.Drawing.Size(215, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Static by Course";
             // 
@@ -57,10 +60,9 @@ namespace Login
             this.labelPass.AutoSize = true;
             this.labelPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPass.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelPass.Location = new System.Drawing.Point(307, 119);
-            this.labelPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPass.Location = new System.Drawing.Point(409, 146);
             this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(48, 17);
+            this.labelPass.Size = new System.Drawing.Size(57, 20);
             this.labelPass.TabIndex = 1;
             this.labelPass.Text = "Pass:";
             // 
@@ -69,10 +71,9 @@ namespace Login
             this.labelScoreAI.AutoSize = true;
             this.labelScoreAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScoreAI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelScoreAI.Location = new System.Drawing.Point(25, 271);
-            this.labelScoreAI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelScoreAI.Location = new System.Drawing.Point(33, 334);
             this.labelScoreAI.Name = "labelScoreAI";
-            this.labelScoreAI.Size = new System.Drawing.Size(27, 17);
+            this.labelScoreAI.Size = new System.Drawing.Size(32, 20);
             this.labelScoreAI.TabIndex = 2;
             this.labelScoreAI.Text = "AI:";
             // 
@@ -81,10 +82,9 @@ namespace Login
             this.labelScoreML.AutoSize = true;
             this.labelScoreML.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScoreML.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelScoreML.Location = new System.Drawing.Point(25, 221);
-            this.labelScoreML.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelScoreML.Location = new System.Drawing.Point(33, 272);
             this.labelScoreML.Name = "labelScoreML";
-            this.labelScoreML.Size = new System.Drawing.Size(142, 17);
+            this.labelScoreML.Size = new System.Drawing.Size(164, 20);
             this.labelScoreML.TabIndex = 3;
             this.labelScoreML.Text = "Machine Learning:";
             // 
@@ -93,10 +93,9 @@ namespace Login
             this.labelScoreJava.AutoSize = true;
             this.labelScoreJava.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScoreJava.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelScoreJava.Location = new System.Drawing.Point(25, 171);
-            this.labelScoreJava.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelScoreJava.Location = new System.Drawing.Point(33, 210);
             this.labelScoreJava.Name = "labelScoreJava";
-            this.labelScoreJava.Size = new System.Drawing.Size(47, 17);
+            this.labelScoreJava.Size = new System.Drawing.Size(54, 20);
             this.labelScoreJava.TabIndex = 4;
             this.labelScoreJava.Text = "Java:";
             // 
@@ -105,10 +104,9 @@ namespace Login
             this.labelScoreC.AutoSize = true;
             this.labelScoreC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScoreC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelScoreC.Location = new System.Drawing.Point(25, 119);
-            this.labelScoreC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelScoreC.Location = new System.Drawing.Point(33, 146);
             this.labelScoreC.Name = "labelScoreC";
-            this.labelScoreC.Size = new System.Drawing.Size(32, 17);
+            this.labelScoreC.Size = new System.Drawing.Size(38, 20);
             this.labelScoreC.TabIndex = 5;
             this.labelScoreC.Text = "C#:";
             // 
@@ -117,10 +115,9 @@ namespace Login
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(302, 67);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(403, 82);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(162, 25);
+            this.label7.Size = new System.Drawing.Size(206, 29);
             this.label7.TabIndex = 6;
             this.label7.Text = "Static by Result";
             // 
@@ -129,10 +126,9 @@ namespace Login
             this.labelFail.AutoSize = true;
             this.labelFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelFail.Location = new System.Drawing.Point(309, 171);
-            this.labelFail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelFail.Location = new System.Drawing.Point(412, 210);
             this.labelFail.Name = "labelFail";
-            this.labelFail.Size = new System.Drawing.Size(39, 17);
+            this.labelFail.Size = new System.Drawing.Size(46, 20);
             this.labelFail.TabIndex = 7;
             this.labelFail.Text = "Fail:";
             // 
@@ -141,21 +137,69 @@ namespace Login
             this.buttonDrawChart.BackColor = System.Drawing.Color.ForestGreen;
             this.buttonDrawChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDrawChart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonDrawChart.Location = new System.Drawing.Point(357, 283);
-            this.buttonDrawChart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDrawChart.Location = new System.Drawing.Point(512, 272);
+            this.buttonDrawChart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDrawChart.Name = "buttonDrawChart";
-            this.buttonDrawChart.Size = new System.Drawing.Size(97, 25);
+            this.buttonDrawChart.Size = new System.Drawing.Size(129, 31);
             this.buttonDrawChart.TabIndex = 8;
             this.buttonDrawChart.Text = "Draw chart";
             this.buttonDrawChart.UseVisualStyleBackColor = false;
             this.buttonDrawChart.Click += new System.EventHandler(this.buttonDrawChart_Click);
             // 
+            // labelScorePython
+            // 
+            this.labelScorePython.AutoSize = true;
+            this.labelScorePython.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScorePython.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelScorePython.Location = new System.Drawing.Point(33, 400);
+            this.labelScorePython.Name = "labelScorePython";
+            this.labelScorePython.Size = new System.Drawing.Size(78, 20);
+            this.labelScorePython.TabIndex = 9;
+            this.labelScorePython.Text = "Python: ";
+            // 
+            // labelScoreSQL
+            // 
+            this.labelScoreSQL.AutoSize = true;
+            this.labelScoreSQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScoreSQL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelScoreSQL.Location = new System.Drawing.Point(33, 458);
+            this.labelScoreSQL.Name = "labelScoreSQL";
+            this.labelScoreSQL.Size = new System.Drawing.Size(52, 20);
+            this.labelScoreSQL.TabIndex = 10;
+            this.labelScoreSQL.Text = "SQL:";
+            // 
+            // labelScoreR
+            // 
+            this.labelScoreR.AutoSize = true;
+            this.labelScoreR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScoreR.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelScoreR.Location = new System.Drawing.Point(276, 400);
+            this.labelScoreR.Name = "labelScoreR";
+            this.labelScoreR.Size = new System.Drawing.Size(28, 20);
+            this.labelScoreR.TabIndex = 11;
+            this.labelScoreR.Text = "R:";
+            // 
+            // labelScoreWinfrom
+            // 
+            this.labelScoreWinfrom.AutoSize = true;
+            this.labelScoreWinfrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScoreWinfrom.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelScoreWinfrom.Location = new System.Drawing.Point(276, 334);
+            this.labelScoreWinfrom.Name = "labelScoreWinfrom";
+            this.labelScoreWinfrom.Size = new System.Drawing.Size(85, 20);
+            this.labelScoreWinfrom.TabIndex = 12;
+            this.labelScoreWinfrom.Text = "Winfrom:";
+            // 
             // StaticsResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(465, 319);
+            this.ClientSize = new System.Drawing.Size(653, 500);
+            this.Controls.Add(this.labelScoreWinfrom);
+            this.Controls.Add(this.labelScoreR);
+            this.Controls.Add(this.labelScoreSQL);
+            this.Controls.Add(this.labelScorePython);
             this.Controls.Add(this.buttonDrawChart);
             this.Controls.Add(this.labelFail);
             this.Controls.Add(this.label7);
@@ -165,7 +209,7 @@ namespace Login
             this.Controls.Add(this.labelScoreAI);
             this.Controls.Add(this.labelPass);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StaticsResultForm";
             this.Text = "StaticsResultForm";
             this.Load += new System.EventHandler(this.StaticsResultForm_Load);
@@ -185,5 +229,9 @@ namespace Login
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labelFail;
         private System.Windows.Forms.Button buttonDrawChart;
+        private System.Windows.Forms.Label labelScorePython;
+        private System.Windows.Forms.Label labelScoreSQL;
+        private System.Windows.Forms.Label labelScoreR;
+        private System.Windows.Forms.Label labelScoreWinfrom;
     }
 }
