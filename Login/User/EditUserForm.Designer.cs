@@ -50,6 +50,7 @@ namespace Login
             this.richTextBoxAddress = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonDownload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,7 +167,7 @@ namespace Login
             this.btnUploadImage.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnUploadImage.Location = new System.Drawing.Point(603, 180);
             this.btnUploadImage.Name = "btnUploadImage";
-            this.btnUploadImage.Size = new System.Drawing.Size(302, 29);
+            this.btnUploadImage.Size = new System.Drawing.Size(157, 29);
             this.btnUploadImage.TabIndex = 57;
             this.btnUploadImage.Text = "Upload Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
@@ -256,12 +257,24 @@ namespace Login
             this.label5.TabIndex = 67;
             this.label5.Text = "Picture";
             // 
+            // buttonDownload
+            // 
+            this.buttonDownload.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonDownload.Location = new System.Drawing.Point(759, 180);
+            this.buttonDownload.Name = "buttonDownload";
+            this.buttonDownload.Size = new System.Drawing.Size(146, 29);
+            this.buttonDownload.TabIndex = 68;
+            this.buttonDownload.Text = "Download Image";
+            this.buttonDownload.UseVisualStyleBackColor = true;
+            this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
+            // 
             // EditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(917, 431);
+            this.Controls.Add(this.buttonDownload);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.richTextBoxAddress);
             this.Controls.Add(this.label6);
@@ -315,5 +328,6 @@ namespace Login
         private System.Windows.Forms.RichTextBox richTextBoxAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonDownload;
     }
 }

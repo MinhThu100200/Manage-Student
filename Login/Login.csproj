@@ -62,10 +62,10 @@
     <Compile Include="Course\CourseStudentListForm.Designer.cs">
       <DependentUpon>CourseStudentListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListStudentByContact.cs">
+    <Compile Include="Contacts\ListStudentByContact.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListStudentByContact.Designer.cs">
+    <Compile Include="Contacts\ListStudentByContact.Designer.cs">
       <DependentUpon>ListStudentByContact.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\AboutMeForm.cs">
@@ -247,7 +247,7 @@
     <EmbeddedResource Include="Course\CourseStudentListForm.resx">
       <DependentUpon>CourseStudentListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListStudentByContact.resx">
+    <EmbeddedResource Include="Contacts\ListStudentByContact.resx">
       <DependentUpon>ListStudentByContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\AboutMeForm.resx">

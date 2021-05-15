@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -117,6 +118,20 @@ namespace Login
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonDownload_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog svf = new SaveFileDialog();
+            svf.FileName = ("Contact" + txtFirstName.Text + txtLastName.Text );
+            if ((pictureBoxImg.Image == null))
+            {
+                MessageBox.Show("No Image In The PictureBox");
+            }
+            else if ((svf.ShowDialog() == DialogResult.OK))
+            {
+                pictureBoxImg.Image.Save((svf.FileName + ("." + ImageFormat.Jpeg.ToString())));
+            }
         }
     }
 }
