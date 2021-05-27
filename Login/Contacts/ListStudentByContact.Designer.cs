@@ -31,23 +31,23 @@ namespace Login
         {
             this.txtContact = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             this.dataGridViewListStudent = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxIdContact = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonPrint = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
+            this.pictureBoxImg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).BeginInit();
             this.SuspendLayout();
             // 
             // txtContact
             // 
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContact.Location = new System.Drawing.Point(518, 133);
+            this.txtContact.Location = new System.Drawing.Point(865, 136);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(270, 30);
+            this.txtContact.Size = new System.Drawing.Size(258, 30);
             this.txtContact.TabIndex = 39;
             // 
             // label1
@@ -55,21 +55,11 @@ namespace Login
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(356, 136);
+            this.label1.Location = new System.Drawing.Point(703, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 38;
             this.label1.Text = "Contact Name:";
-            // 
-            // pictureBoxImg
-            // 
-            this.pictureBoxImg.Image = global::Login.Properties.Resources.IMG_4198;
-            this.pictureBoxImg.Location = new System.Drawing.Point(672, 12);
-            this.pictureBoxImg.Name = "pictureBoxImg";
-            this.pictureBoxImg.Size = new System.Drawing.Size(116, 109);
-            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxImg.TabIndex = 40;
-            this.pictureBoxImg.TabStop = false;
             // 
             // dataGridViewListStudent
             // 
@@ -78,7 +68,7 @@ namespace Login
             this.dataGridViewListStudent.Name = "dataGridViewListStudent";
             this.dataGridViewListStudent.RowHeadersWidth = 51;
             this.dataGridViewListStudent.RowTemplate.Height = 24;
-            this.dataGridViewListStudent.Size = new System.Drawing.Size(759, 253);
+            this.dataGridViewListStudent.Size = new System.Drawing.Size(1094, 253);
             this.dataGridViewListStudent.TabIndex = 41;
             // 
             // label2
@@ -86,7 +76,7 @@ namespace Login
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(287, 32);
+            this.label2.Location = new System.Drawing.Point(451, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 39);
             this.label2.TabIndex = 42;
@@ -113,30 +103,42 @@ namespace Login
             // 
             // buttonSave
             // 
+            this.buttonSave.BackColor = System.Drawing.Color.Coral;
             this.buttonSave.Location = new System.Drawing.Point(151, 444);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(134, 30);
             this.buttonSave.TabIndex = 45;
             this.buttonSave.Text = "Save To Text";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Location = new System.Drawing.Point(501, 444);
+            this.buttonPrint.BackColor = System.Drawing.Color.Salmon;
+            this.buttonPrint.Location = new System.Drawing.Point(839, 448);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(134, 30);
             this.buttonPrint.TabIndex = 46;
             this.buttonPrint.Text = "Print";
-            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.UseVisualStyleBackColor = false;
             this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // pictureBoxImg
+            // 
+            this.pictureBoxImg.Image = global::Login.Properties.Resources.IMG_4198;
+            this.pictureBoxImg.Location = new System.Drawing.Point(1007, 12);
+            this.pictureBoxImg.Name = "pictureBoxImg";
+            this.pictureBoxImg.Size = new System.Drawing.Size(116, 109);
+            this.pictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxImg.TabIndex = 40;
+            this.pictureBoxImg.TabStop = false;
             // 
             // ListStudentByContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.ClientSize = new System.Drawing.Size(1151, 490);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxIdContact);
@@ -149,8 +151,8 @@ namespace Login
             this.Name = "ListStudentByContact";
             this.Text = "ListStudentByContact";
             this.Load += new System.EventHandler(this.ListStudentByContact_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

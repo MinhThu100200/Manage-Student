@@ -31,7 +31,13 @@ namespace Login
             command.Parameters.Add("@userid", SqlDbType.Int).Value = Global.GlobalUserID;
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             dataGridViewContacts.RowTemplate.Height = 80;
-            dataGridViewContacts.DataSource = contact.selectContactList(command);          
+           
+            dataGridViewContacts.DataSource = contact.selectContactList(command);
+            dataGridViewContacts.Columns[0].Width = 50;
+            dataGridViewContacts.Columns[3].Width = 74;
+            dataGridViewContacts.Columns[4].Width = 70;
+            dataGridViewContacts.Columns[5].Width = 140;
+            dataGridViewContacts.Columns[6].Width = 110;
             picCol = (DataGridViewImageColumn)dataGridViewContacts.Columns[7];
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridViewContacts.AllowUserToAddRows = false;

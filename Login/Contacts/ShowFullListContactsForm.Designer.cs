@@ -45,7 +45,7 @@ namespace Login
             this.dataGridViewContacts.Name = "dataGridViewContacts";
             this.dataGridViewContacts.RowHeadersWidth = 51;
             this.dataGridViewContacts.RowTemplate.Height = 26;
-            this.dataGridViewContacts.Size = new System.Drawing.Size(954, 404);
+            this.dataGridViewContacts.Size = new System.Drawing.Size(1086, 404);
             this.dataGridViewContacts.TabIndex = 0;
             this.dataGridViewContacts.Click += new System.EventHandler(this.dataGridViewContacts_Click);
             this.dataGridViewContacts.DoubleClick += new System.EventHandler(this.dataGridViewContacts_DoubleClick);
@@ -107,7 +107,7 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1408, 532);
+            this.ClientSize = new System.Drawing.Size(1528, 532);
             this.Controls.Add(this.label);
             this.Controls.Add(this.richTextBoxAddress);
             this.Controls.Add(this.labelShowAll);

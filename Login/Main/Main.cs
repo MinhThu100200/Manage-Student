@@ -118,5 +118,11 @@ namespace Login
             StaticsResultForm frm = new StaticsResultForm();
             frm.ShowDialog();
         }
+
+        private void printToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            PrintScoreForm frm = new PrintScoreForm();
+            frm.ShowDialog();
+        }
     }
 }

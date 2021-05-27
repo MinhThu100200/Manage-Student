@@ -25,12 +25,17 @@ namespace Login
             try
             {
                 dataGridViewListStudent.ReadOnly = true;
+                
                 DataGridViewImageColumn picCol = new DataGridViewImageColumn();
+                dataGridViewListStudent.RowTemplate.Height = 80;              
                 int id = Convert.ToInt32(textBoxIdContact.Text);
                 dataGridViewListStudent.DataSource = contact.getStudentByContact(id);
+                dataGridViewListStudent.Columns[0].Width = 50;
                 picCol = (DataGridViewImageColumn)dataGridViewListStudent.Columns[7];
                 picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                         
                 dataGridViewListStudent.AllowUserToAddRows = false;
+
 
             }
             catch { }

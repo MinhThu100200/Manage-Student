@@ -94,10 +94,10 @@
       <DependentUpon>EditContactsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="class\GROUP.cs" />
-    <Compile Include="PrintScoreForm.cs">
+    <Compile Include="Score\PrintScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintScoreForm.Designer.cs">
+    <Compile Include="Score\PrintScoreForm.Designer.cs">
       <DependentUpon>PrintScoreForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User\EditUserForm.cs">
@@ -277,7 +277,7 @@
     <EmbeddedResource Include="Course\AddCourseForm.resx">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintScoreForm.resx">
+    <EmbeddedResource Include="Score\PrintScoreForm.resx">
       <DependentUpon>PrintScoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\EditUserForm.resx">
