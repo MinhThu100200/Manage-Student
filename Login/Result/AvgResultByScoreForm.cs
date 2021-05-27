@@ -76,7 +76,17 @@ namespace Login
             dataGridViewScoreOfCourse.RowTemplate.Height = 80;
             dataGridViewScoreOfCourse.DataSource = newTable;
             dataGridViewScoreOfCourse.AllowUserToAddRows = false;
-       
+            dataGridViewScoreOfCourse.Columns[0].Width = 50;
+            dataGridViewScoreOfCourse.Columns[3].Width = 50;
+            dataGridViewScoreOfCourse.Columns[4].Width = 50;
+            dataGridViewScoreOfCourse.Columns[5].Width = 50;
+            dataGridViewScoreOfCourse.Columns[6].Width = 50;
+            dataGridViewScoreOfCourse.Columns[7].Width = 50;
+            dataGridViewScoreOfCourse.Columns[8].Width = 50;
+            dataGridViewScoreOfCourse.Columns[9].Width = 50;
+            dataGridViewScoreOfCourse.Columns[10].Width = 50;
+            dataGridViewScoreOfCourse.Columns[11].Width = 71;
+
         }
 
         private void buttonPrint_Click(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace Login
             this.dataGridViewContact.Name = "dataGridViewContact";
             this.dataGridViewContact.RowHeadersWidth = 51;
             this.dataGridViewContact.RowTemplate.Height = 26;
-            this.dataGridViewContact.Size = new System.Drawing.Size(887, 386);
+            this.dataGridViewContact.Size = new System.Drawing.Size(605, 386);
             this.dataGridViewContact.TabIndex = 0;
             this.dataGridViewContact.DoubleClick += new System.EventHandler(this.dataGridViewContact_DoubleClick);
             // 
@@ -50,7 +50,7 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Plum;
-            this.ClientSize = new System.Drawing.Size(914, 450);
+            this.ClientSize = new System.Drawing.Size(632, 450);
             this.Controls.Add(this.dataGridViewContact);
             this.Name = "SelectContactsForm";
             this.Text = "SelectContactsForm";

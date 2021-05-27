@@ -24,6 +24,9 @@ namespace Login
             SqlCommand command = new SqlCommand("SELECT  Id ,  Firstname,  Lastname,  group_id  as'group id' FROM  Contact  WHERE  User_id  = @uid");
             command.Parameters.Add("@uid", SqlDbType.Int).Value = Global.GlobalUserID;
             dataGridViewContact.DataSource = contact.selectContactList(command);
+            dataGridViewContact.ReadOnly = true;
+            dataGridViewContact.RowTemplate.Height = 80;
+            dataGridViewContact.AllowUserToAddRows = false;
         }
 
         private void dataGridViewContact_DoubleClick(object sender, EventArgs e)

@@ -63,7 +63,7 @@ namespace Login
             this.buttonPrint.BackColor = System.Drawing.SystemColors.GrayText;
             this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPrint.Location = new System.Drawing.Point(597, 404);
+            this.buttonPrint.Location = new System.Drawing.Point(1053, 404);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(122, 37);
             this.buttonPrint.TabIndex = 2;
@@ -78,14 +78,14 @@ namespace Login
             this.dataGridViewStudentList.Name = "dataGridViewStudentList";
             this.dataGridViewStudentList.RowHeadersWidth = 51;
             this.dataGridViewStudentList.RowTemplate.Height = 24;
-            this.dataGridViewStudentList.Size = new System.Drawing.Size(737, 282);
+            this.dataGridViewStudentList.Size = new System.Drawing.Size(1137, 282);
             this.dataGridViewStudentList.TabIndex = 3;
             // 
             // labelSemester
             // 
             this.labelSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSemester.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelSemester.Location = new System.Drawing.Point(504, 57);
+            this.labelSemester.Location = new System.Drawing.Point(916, 57);
             this.labelSemester.Name = "labelSemester";
             this.labelSemester.Size = new System.Drawing.Size(259, 25);
             this.labelSemester.TabIndex = 4;
@@ -94,7 +94,7 @@ namespace Login
             // textBoxSemester
             // 
             this.textBoxSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSemester.Location = new System.Drawing.Point(612, 57);
+            this.textBoxSemester.Location = new System.Drawing.Point(1024, 57);
             this.textBoxSemester.Name = "textBoxSemester";
             this.textBoxSemester.Size = new System.Drawing.Size(151, 30);
             this.textBoxSemester.TabIndex = 5;
@@ -117,7 +117,7 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1197, 450);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxSemester);
             this.Controls.Add(this.labelSemester);

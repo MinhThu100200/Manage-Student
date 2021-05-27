@@ -198,5 +198,21 @@ namespace Login
                 return false;
             }
         }
+
+        //Get name of course 
+        public DataTable getNameCourse()
+        {
+            DataTable dt = new DataTable();
+            
+           
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("SELECT Course.Label FROM Course", db.getConnection);
+
+            adapter.SelectCommand = command;
+            adapter.Fill(dt);
+            return dt;
+           
+
+        }
     }
 }

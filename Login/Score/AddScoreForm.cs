@@ -65,6 +65,7 @@ namespace Login
             comboBoxCourse.DataSource = course.getCourses();
             comboBoxCourse.DisplayMember = "label";
             comboBoxCourse.ValueMember = "id";
+            comboBoxCourse.SelectedItem = null;
 
             //datagridview
             dataGridViewListStudent.ReadOnly = true;

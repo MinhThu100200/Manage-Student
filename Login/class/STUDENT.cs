@@ -76,6 +76,17 @@ namespace Login
             adapter.Fill(dt);
             return dt;
         }
+        //get students with some atribute
+        public DataTable getStudentWithThreeAtribute()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("SELECT ID, Firstname, Lastname FROM Student", db.getConnection);
+            DataTable dt = new DataTable();
+            adapter.SelectCommand = command;
+            adapter.Fill(dt);
+            return dt;
+        }
+
         //Get student by ID
         public DataTable getStudentId(int id)
         {

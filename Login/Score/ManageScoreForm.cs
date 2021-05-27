@@ -140,13 +140,13 @@ namespace Login
             dataGridViewListStudent.DataSource = score.getStudentAndScore();
             dataGridViewListStudent.AllowUserToAddRows = false;
             dataGridViewListStudent.Columns[0].HeaderText = "ID Student";
-            dataGridViewListStudent.Columns[4].HeaderText = "Score Student";
-            dataGridViewListStudent.Columns[5].HeaderText = "ID Course";
+            dataGridViewListStudent.Columns[5].HeaderText = "Score Student";
+            dataGridViewListStudent.Columns[3].HeaderText = "ID Course";
             dataGridViewListStudent.Columns[0].Width = 53;
             dataGridViewListStudent.Columns[1].Width = 64;
             dataGridViewListStudent.Columns[2].Width = 64;
-            dataGridViewListStudent.Columns[3].Width = 150;
-            dataGridViewListStudent.Columns[4].Width = 53;
+            dataGridViewListStudent.Columns[4].Width = 150;
+            dataGridViewListStudent.Columns[3].Width = 53;
             dataGridViewListStudent.Columns[5].Width = 53;
         }       
 

@@ -36,7 +36,7 @@ namespace Login
             picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridViewContacts.AllowUserToAddRows = false;
 
-
+            //color
             for (int i = 0; i < dataGridViewContacts.Rows.Count; i++)
             {
                 if(isOdd(i))
@@ -76,7 +76,7 @@ namespace Login
                 picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 dataGridViewContacts.AllowUserToAddRows = false;
 
-
+                //color
                 for (int i = 0; i < dataGridViewContacts.Rows.Count; i++)
                 {
                     if (isOdd(i))
@@ -90,7 +90,7 @@ namespace Login
             
 
         }
-
+        //load address
         private void dataGridViewContacts_Click(object sender, EventArgs e)
         {
             try
@@ -100,12 +100,12 @@ namespace Login
             catch { }
             
         }
-
+        //reload
         private void labelShowAll_Click(object sender, EventArgs e)
         {
             ShowFullListContactsForm_Load(null, null);
         }
-
+        //double click to access list student by contact
         private void dataGridViewContacts_DoubleClick(object sender, EventArgs e)
         {
             ListStudentByContact frm = new ListStudentByContact();

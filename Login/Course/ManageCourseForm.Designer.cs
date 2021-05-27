@@ -211,7 +211,7 @@ namespace Login
             this.dataGridViewListCourse.Name = "dataGridViewListCourse";
             this.dataGridViewListCourse.RowHeadersWidth = 51;
             this.dataGridViewListCourse.RowTemplate.Height = 24;
-            this.dataGridViewListCourse.Size = new System.Drawing.Size(605, 369);
+            this.dataGridViewListCourse.Size = new System.Drawing.Size(760, 369);
             this.dataGridViewListCourse.TabIndex = 15;
             this.dataGridViewListCourse.Click += new System.EventHandler(this.dataGridViewListCourse_Click);
             this.dataGridViewListCourse.DoubleClick += new System.EventHandler(this.dataGridViewListCourse_DoubleClick);
@@ -220,9 +220,9 @@ namespace Login
             // 
             this.panelTotal.BackColor = System.Drawing.Color.Navy;
             this.panelTotal.Controls.Add(this.labelTotal);
-            this.panelTotal.Location = new System.Drawing.Point(921, 382);
+            this.panelTotal.Location = new System.Drawing.Point(1070, 381);
             this.panelTotal.Name = "panelTotal";
-            this.panelTotal.Size = new System.Drawing.Size(200, 46);
+            this.panelTotal.Size = new System.Drawing.Size(206, 46);
             this.panelTotal.TabIndex = 16;
             // 
             // labelTotal
@@ -277,7 +277,7 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1133, 450);
+            this.ClientSize = new System.Drawing.Size(1291, 450);
             this.Controls.Add(this.comboBoxSemester);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panelTotal);

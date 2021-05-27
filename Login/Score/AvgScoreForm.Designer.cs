@@ -38,11 +38,11 @@ namespace Login
             this.dataGridViewAvgScore.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dataGridViewAvgScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAvgScore.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridViewAvgScore.Location = new System.Drawing.Point(32, 36);
+            this.dataGridViewAvgScore.Location = new System.Drawing.Point(12, 36);
             this.dataGridViewAvgScore.Name = "dataGridViewAvgScore";
             this.dataGridViewAvgScore.RowHeadersWidth = 51;
             this.dataGridViewAvgScore.RowTemplate.Height = 24;
-            this.dataGridViewAvgScore.Size = new System.Drawing.Size(390, 371);
+            this.dataGridViewAvgScore.Size = new System.Drawing.Size(493, 277);
             this.dataGridViewAvgScore.TabIndex = 0;
             // 
             // AvgScoreForm
@@ -50,7 +50,7 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(453, 450);
+            this.ClientSize = new System.Drawing.Size(516, 323);
             this.Controls.Add(this.dataGridViewAvgScore);
             this.Name = "AvgScoreForm";
             this.Text = "AvgScoreForm";

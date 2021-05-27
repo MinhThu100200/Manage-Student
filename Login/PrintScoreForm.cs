@@ -3,23 +3,75 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Microsoft.Office.Interop.Word;
+using System.Drawing.Printing;
+using System.Windows.Forms;
 using System.IO;
 
 namespace Login
 {
-    public partial class PrintCourseForm : Form
+    public partial class PrintScoreForm : Form
     {
-        public PrintCourseForm()
+        public PrintScoreForm()
         {
             InitializeComponent();
         }
+
+        SCORE score = new SCORE();
         COURSE course = new COURSE();
+        STUDENT student = new STUDENT();
+        private void listBoxCourse_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                //load data contact
+                int courseid = (int)listBoxCourse.SelectedValue;
+                dataGridViewListScore.ReadOnly = true;
+               
+                dataGridViewListScore.RowTemplate.Height = 80;
+                dataGridViewListScore.DataSource = score.getScoreByCourse(courseid);
+                
+                dataGridViewListScore.AllowUserToAddRows = false;
+
+                
+            }
+            catch { }
+            dataGridViewListScore.ClearSelection();
+        }
+
+        private void PrintScoreForm_Load(object sender, EventArgs e)
+        {
+            //load data list score
+            dataGridViewListScore.ReadOnly = true;
+            dataGridViewListScore.DataSource = score.getStudentAndScore();
+            dataGridViewListScore.RowTemplate.Height = 80;
+            dataGridViewListScore.AllowUserToAddRows = false;
+            dataGridViewListScore.Columns[0].Width = 45;
+            dataGridViewListScore.Columns[3].Width = 45;
+            dataGridViewListScore.Columns[3].HeaderText = "Course ID";
+            dataGridViewListScore.Columns[4].Width = 110;
+            dataGridViewListScore.Columns[5].Width = 54;
+            dataGridViewListScore.Columns[5].HeaderText = "Student Score";
+
+            //load data list student
+
+            dataGridViewListStudent.ReadOnly = true;
+            dataGridViewListStudent.RowTemplate.Height = 80;
+            dataGridViewListStudent.DataSource = student.getStudentWithThreeAtribute();
+            dataGridViewListStudent.AllowUserToAddRows = false;
+            dataGridViewListStudent.Columns[0].Width = 50;
+
+            //load data list course
+            listBoxCourse.DataSource = course.getCourses();
+            listBoxCourse.ValueMember = "Id";
+            listBoxCourse.DisplayMember = "Label";
+            listBoxCourse.SelectedItem = null;
+            dataGridViewListScore.ClearSelection();
+
+        }
 
         private void buttonToFile_Click(object sender, EventArgs e)
         {
@@ -29,9 +81,21 @@ namespace Login
 
             if (savefile.ShowDialog() == DialogResult.OK && savefile.FileName.Length > 0)
             {
-                Export_Data_To_Word(dataGridViewListCourse, savefile.FileName);
+                Export_Data_To_Word(dataGridViewListScore, savefile.FileName);
                 MessageBox.Show("File saved!", "Message Dialog", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDlg = new PrintDialog();
+            PrintDocument printDoc = new PrintDocument();
+            printDoc.DocumentName = "Print Document";
+            printDlg.Document = printDoc;
+            printDlg.AllowSelection = true;
+            printDlg.AllowSomePages = true;
+
+            if (printDlg.ShowDialog() == DialogResult.OK) printDoc.Print();
         }
         public void Export_Data_To_Word(DataGridView DGV, string filename)
         {
@@ -110,27 +174,25 @@ namespace Login
 
 
                 //save image
-                for (r = 0; r <= RowCount - 1; r++)
-                {
-                    byte[] imgbyte = (byte[])dataGridViewListCourse.Rows[r].Cells[7].Value;
-                    MemoryStream ms = new MemoryStream(imgbyte);
-                    //Image sparePicture = Image.FromStream(ms);
-                    Image finalPic = (Image)(new Bitmap(Image.FromStream(ms), new Size(70, 70)));
-                    Clipboard.SetDataObject(finalPic);
-                    oDoc.Application.Selection.Tables[1].Cell(r + 2, 8).Range.Paste();
-                    oDoc.Application.Selection.Tables[1].Cell(r + 2, 8).Range.InsertParagraph();
-                }
+                //for (r = 0; r <= RowCount - 1; r++)
+                //{
+                //    byte[] imgbyte = (byte[])dataGridViewListStudent.Rows[r].Cells[7].Value;
+                //    MemoryStream ms = new MemoryStream(imgbyte);
+                //    //Image sparePicture = Image.FromStream(ms);
+                //    Image finalPic = (Image)(new Bitmap(Image.FromStream(ms), new Size(70, 70)));
+                //    Clipboard.SetDataObject(finalPic);
+                //    oDoc.Application.Selection.Tables[1].Cell(r + 2, 8).Range.Paste();
+                //    oDoc.Application.Selection.Tables[1].Cell(r + 2, 8).Range.InsertParagraph();
+                //}
                 //header text
                 foreach (Section section in oDoc.Application.ActiveDocument.Sections)
                 {
                     Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
                     headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
-                    headerRange.Text = "Danh Sách Sinh Viên";
+                    headerRange.Text = "Bảng điểm Sinh Viên";
                     headerRange.Font.Size = 16;
                     headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
                 }
-
-
 
 
                 //save the file
@@ -138,26 +200,6 @@ namespace Login
 
 
             }
-        }
-
-        private void buttonPrint_Click(object sender, EventArgs e)
-        {
-            PrintDialog printDlg = new PrintDialog();
-            PrintDocument printDoc = new PrintDocument();
-            printDoc.DocumentName = "Print Document";
-            printDlg.Document = printDoc;
-            printDlg.AllowSelection = true;
-            printDlg.AllowSomePages = true;
-
-            if (printDlg.ShowDialog() == DialogResult.OK) printDoc.Print();
-        }
-
-        private void PrintCourseForm_Load(object sender, EventArgs e)
-        {
-            dataGridViewListCourse.ReadOnly = true;
-            dataGridViewListCourse.RowTemplate.Height = 80;
-            dataGridViewListCourse.DataSource = course.getCourses();
-            dataGridViewListCourse.AllowUserToAddRows = false;
         }
     }
 }

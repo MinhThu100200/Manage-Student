@@ -72,8 +72,8 @@ namespace Login
         {
             SqlCommand command = new SqlCommand();
             command.Connection = db.getConnection;
-            command.CommandText = "SELECT Course.Label, AVG(Score.Score_student) as AverageGrade FROM Course, Score WHERE Course.Id =" + 
-                "Score.Course_id GROUP BY Course.Label";
+            command.CommandText = "SELECT Course.Id, Course.Label, AVG(Score.Score_student) as AverageGrade FROM Course, Score WHERE Course.Id =" + 
+                "Score.Course_id GROUP BY Course.Label, Course.Id";
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable tb = new DataTable();
             adapter.Fill(tb);
@@ -101,13 +101,25 @@ namespace Login
         public DataTable getStudentAndScore()
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
-            SqlCommand command = new SqlCommand("SELECT st.ID, st.Firstname, st.Lastname, co.Label, sc.Score_student, co.Id FROM Score as sc, Student as st, Course as co " +
+            SqlCommand command = new SqlCommand("SELECT st.ID, st.Firstname, st.Lastname, co.Id, co.Label, sc.Score_student FROM Score as sc, Student as st, Course as co " +
                 "WHERE sc.Student_id = st.ID and sc.Course_id = co.Id", db.getConnection);
             DataTable dt = new DataTable();
             adapter.SelectCommand = command;
             adapter.Fill(dt);
             return dt;
         }
-        
+        //get score by course
+
+        public DataTable getScoreByCourse(int id)
+        {
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("SELECT st.ID, st.Firstname, st.Lastname, co.Id, co.Label, sc.Score_student FROM Score as sc, Student as st, Course as co " +
+                "WHERE sc.Student_id = st.ID and sc.Course_id = co.Id and sc.Course_id = "+id, db.getConnection);
+            DataTable dt = new DataTable();
+            adapter.SelectCommand = command;
+            adapter.Fill(dt);
+            return dt;
+        }
     }
 }

@@ -49,7 +49,7 @@ namespace Login
             this.dataGridViewListStudent.Name = "dataGridViewListStudent";
             this.dataGridViewListStudent.RowHeadersWidth = 51;
             this.dataGridViewListStudent.RowTemplate.Height = 24;
-            this.dataGridViewListStudent.Size = new System.Drawing.Size(608, 369);
+            this.dataGridViewListStudent.Size = new System.Drawing.Size(626, 369);
             this.dataGridViewListStudent.TabIndex = 24;
             this.dataGridViewListStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListScore_CellContentClick);
             // 

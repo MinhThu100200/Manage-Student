@@ -42,9 +42,8 @@ namespace Login
             this.dataGridViewListCourse.Name = "dataGridViewListCourse";
             this.dataGridViewListCourse.RowHeadersWidth = 51;
             this.dataGridViewListCourse.RowTemplate.Height = 24;
-            this.dataGridViewListCourse.Size = new System.Drawing.Size(1009, 389);
+            this.dataGridViewListCourse.Size = new System.Drawing.Size(760, 389);
             this.dataGridViewListCourse.TabIndex = 0;
-            this.dataGridViewListCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListCourse_CellContentClick);
             // 
             // buttonToFile
             // 
@@ -76,12 +75,13 @@ namespace Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 531);
+            this.ClientSize = new System.Drawing.Size(800, 499);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonToFile);
             this.Controls.Add(this.dataGridViewListCourse);
             this.Name = "PrintCourseForm";
             this.Text = "PrintCourseForm";
+            this.Load += new System.EventHandler(this.PrintCourseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListCourse)).EndInit();
             this.ResumeLayout(false);
 

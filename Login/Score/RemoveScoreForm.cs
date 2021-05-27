@@ -19,20 +19,22 @@ namespace Login
         SCORE score = new SCORE();
         private void RemoveScoreForm_Load(object sender, EventArgs e)
         {
+
             //datagridview
             dataGridViewListScore.ReadOnly = true;
             dataGridViewListScore.RowTemplate.Height = 80;
             dataGridViewListScore.DataSource = score.getStudentAndScore();
             dataGridViewListScore.AllowUserToAddRows = false;
             dataGridViewListScore.Columns[0].HeaderText = "ID Student";
-            dataGridViewListScore.Columns[4].HeaderText = "Score Student";
-            dataGridViewListScore.Columns[5].HeaderText = "ID Course";
+            dataGridViewListScore.Columns[5].HeaderText = "Score Student";
+            dataGridViewListScore.Columns[3].HeaderText = "ID Course";
             dataGridViewListScore.Columns[0].Width = 67;
             dataGridViewListScore.Columns[1].Width = 75;
             dataGridViewListScore.Columns[2].Width = 75;
-            dataGridViewListScore.Columns[3].Width = 150;
-            dataGridViewListScore.Columns[4].Width = 69;
+            dataGridViewListScore.Columns[4].Width = 150;
+            dataGridViewListScore.Columns[3].Width = 69;
             dataGridViewListScore.Columns[5].Width = 67;
+
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
